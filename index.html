@@ -20,7 +20,7 @@
   <meta content="Cheshire Cat" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648465641369" as="style">
+  <link rel="preload" href="/css/style.css?time=1648465955348" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1700,8 +1700,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648465641369" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648465641369"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648465955348" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648465955348"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1772,9 +1772,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648465641369","sites":"/js/plugins/sites.js?time=1648465641369","friends":"/js/plugins/friends.js?time=1648465641369","parallax":"/js/plugins/parallax.js?time=1648465641369","rightMenu":"/js/plugins/rightMenu.js?time=1648465641369","contributors":"/js/plugins/contributors.js?time=1648465641369","message":"/js/thirdparty/message.js?time=1648465641369","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648465641369","search":"/js/search/hexo.js?time=1648465641369"},"css":{"style":"/css/style.css?time=1648465641369","message":"/css/message.css?time=1648465641369"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648465955348","sites":"/js/plugins/sites.js?time=1648465955348","friends":"/js/plugins/friends.js?time=1648465955348","parallax":"/js/plugins/parallax.js?time=1648465955348","rightMenu":"/js/plugins/rightMenu.js?time=1648465955348","contributors":"/js/plugins/contributors.js?time=1648465955348","message":"/js/thirdparty/message.js?time=1648465955348","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648465955348","search":"/js/search/hexo.js?time=1648465955348"},"css":{"style":"/css/style.css?time=1648465955348","message":"/css/message.css?time=1648465955348"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Mon Mar 28 2022 19:07:21 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Mon Mar 28 2022 19:12:35 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2553,6 +2553,14 @@ bgm
         
         <time itemprop="dateCreated datePublished" datetime="2022-03-28T13:55:15+08:00">2022-03-28</time>
         
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/hexo/">-[hexo]</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/hexo/" itemprop="url"><span itemprop="name">-[hexo]</span></a>
+            </span>
+          
+        
       </div>
       
         <div>
@@ -2708,28 +2716,35 @@ bgm
   
     
     
-
   
 
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
+  <section class="widget category shadow desktop pjax">
     
   <header>
     
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/hexo/" style="font-size: 14px; color: #999">-[hexo]</a>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/hexo/" href="/categories/hexo/"
+            active-action="action-categorieshexo"
+            ><div class='name'>-[hexo]</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
+
+  
+
+  
+    
+    
 
   
 
@@ -2876,7 +2891,7 @@ bgm
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648465641369.js"></script>
+<script src="/js/app.js?time=1648465955348.js"></script>
 
 
 
@@ -3068,7 +3083,7 @@ bgm
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648465641369')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648465955348')</script>
 
 
 
@@ -3081,19 +3096,19 @@ bgm
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648465641369")
+        volantis.js("/js/plugins/sites.js?time=1648465955348")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648465641369")
+        volantis.js("/js/plugins/friends.js?time=1648465955348")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648465641369")
+        volantis.js("/js/plugins/contributors.js?time=1648465955348")
       }
     
   };
@@ -3218,7 +3233,7 @@ bgm
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648465641369");
+    return volantis.js("/js/search/hexo.js?time=1648465955348");
   }
 
   function loadSearchService() {
@@ -3328,7 +3343,7 @@ bgm
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1648465641369').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1648465955348').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
