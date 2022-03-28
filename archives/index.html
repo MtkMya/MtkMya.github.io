@@ -20,7 +20,7 @@
   <meta content="Cheshire Cat" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648446372257" as="style">
+  <link rel="preload" href="/css/style.css?time=1648464802854" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -768,53 +768,34 @@ button {
 .cover-wrapper.focus .menu .list-h a:hover {
   background: var(--color-card);
 }
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
+.cover-wrapper.focus .menu {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
 }
-.cover-wrapper.dock .menu {
+.cover-wrapper.focus .menu .list-h {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu:hover {
   background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #44d7b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
 }
 @supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
+  .cover-wrapper.focus .menu:hover {
     background: rgba(255,255,255,0.5);
     backdrop-filter: saturate(200%) blur(20px);
   }
+}
+.cover-wrapper.focus .menu .list-h a {
+  margin: 2px;
+}
+.cover-wrapper.focus .menu .list-h a:hover {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  background: var(--color-card);
 }
 .cover-wrapper #parallax-window {
   position: absolute;
@@ -1719,8 +1700,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648446372257" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648446372257"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648464802854" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648464802854"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1791,9 +1772,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648446372257","sites":"/js/plugins/sites.js?time=1648446372257","friends":"/js/plugins/friends.js?time=1648446372257","parallax":"/js/plugins/parallax.js?time=1648446372257","rightMenu":"/js/plugins/rightMenu.js?time=1648446372257","contributors":"/js/plugins/contributors.js?time=1648446372257","message":"/js/thirdparty/message.js?time=1648446372257","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648446372257","search":"/js/search/hexo.js?time=1648446372257"},"css":{"style":"/css/style.css?time=1648446372257","message":"/css/message.css?time=1648446372257"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648464802854","sites":"/js/plugins/sites.js?time=1648464802854","friends":"/js/plugins/friends.js?time=1648464802854","parallax":"/js/plugins/parallax.js?time=1648464802854","rightMenu":"/js/plugins/rightMenu.js?time=1648464802854","contributors":"/js/plugins/contributors.js?time=1648464802854","message":"/js/thirdparty/message.js?time=1648464802854","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648464802854","search":"/js/search/hexo.js?time=1648464802854"},"css":{"style":"/css/style.css?time=1648464802854","message":"/css/message.css?time=1648464802854"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Mon Mar 28 2022 13:46:12 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Mon Mar 28 2022 18:53:22 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2446,7 +2427,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="half" class='cover-wrapper  focus' style="display: ;">
         
   <div id="parallax-window"></div>
 
@@ -2511,6 +2492,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 					
 						
 						<h2>2022</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/2022/03/28/328/">
+									<time>03-28</time>
+									
+										更新日志
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
 					
 						<div class='timenode'>
 								<a class="meta" href="/2022/03/27/aa/">
@@ -2608,6 +2605,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     
+  
+
+  <section class="widget tagcloud shadow desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/hexo/" style="font-size: 14px; color: #999">-[hexo]</a>
+    </div>
+  </section>
+
 
   
 
@@ -2753,7 +2766,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648446372257.js"></script>
+<script src="/js/app.js?time=1648464802854.js"></script>
 
 
 
@@ -2945,7 +2958,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648446372257')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648464802854')</script>
 
 
 
@@ -2958,19 +2971,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648446372257")
+        volantis.js("/js/plugins/sites.js?time=1648464802854")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648446372257")
+        volantis.js("/js/plugins/friends.js?time=1648464802854")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648446372257")
+        volantis.js("/js/plugins/contributors.js?time=1648464802854")
       }
     
   };
@@ -3095,7 +3108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648446372257");
+    return volantis.js("/js/search/hexo.js?time=1648464802854");
   }
 
   function loadSearchService() {
@@ -3205,7 +3218,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1648446372257').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1648464802854').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
