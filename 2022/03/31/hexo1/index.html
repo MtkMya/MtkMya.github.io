@@ -20,30 +20,39 @@
   <meta content="Cheshire Cat" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648784103424" as="style">
+  <link rel="preload" href="/css/style.css?time=1648902385687" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>hexo(1)----搭建·部署 - Cheshire Cat</title>
   <meta name="keywords" content="null">
-  <meta name="description" content="简介基于Node.js的静态博客框架平台:windows 安装hexo1.安装Githttps:&#x2F;&#x2F;gitforwindows.org&#x2F; 2.安装NodeJShttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F; hexo命令部署到Github设置域名">
+  <meta name="description" content="0.简介基于Node.js的静态博客框架平台:windows 1.安装安装Githttps:&#x2F;&#x2F;gitforwindows.org&#x2F;版本控制系统安装完后接下来的操作都可用Git bush敲命令 安装NodeJShttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;Hexo基于NodeJS需要安装NodeJS和npm工具windows：选择LTS版本即可安装完后打开命令行    node -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo(1)----搭建·部署">
 <meta property="og:url" content="http://maoyufan.world/2022/03/31/hexo1/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
-<meta property="og:description" content="简介基于Node.js的静态博客框架平台:windows 安装hexo1.安装Githttps:&#x2F;&#x2F;gitforwindows.org&#x2F; 2.安装NodeJShttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F; hexo命令部署到Github设置域名">
+<meta property="og:description" content="0.简介基于Node.js的静态博客框架平台:windows 1.安装安装Githttps:&#x2F;&#x2F;gitforwindows.org&#x2F;版本控制系统安装完后接下来的操作都可用Git bush敲命令 安装NodeJShttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;Hexo基于NodeJS需要安装NodeJS和npm工具windows：选择LTS版本即可安装完后打开命令行    node -">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T09:22:26.000Z">
-<meta property="article:modified_time" content="2022-03-31T14:31:57.960Z">
+<meta property="article:modified_time" content="2022-04-01T05:00:05.233Z">
 <meta property="article:author" content="毛予">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
   <!-- import meta -->
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
   <!-- link -->
   <!-- import link -->
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-16x16.png">
+      <link rel="manifest" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/site.webmanifest">
+      <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon.ico">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -64,7 +73,7 @@ article + article,
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
-  --color-site-footer: #666;
+  --color-site-footer: #bdc;
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
@@ -1704,8 +1713,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648784103424" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648784103424"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648902385687" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648902385687"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1776,9 +1785,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648784103424","sites":"/js/plugins/sites.js?time=1648784103424","friends":"/js/plugins/friends.js?time=1648784103424","parallax":"/js/plugins/parallax.js?time=1648784103424","rightMenu":"/js/plugins/rightMenu.js?time=1648784103424","contributors":"/js/plugins/contributors.js?time=1648784103424","message":"/js/thirdparty/message.js?time=1648784103424","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648784103424","search":"/js/search/hexo.js?time=1648784103424"},"css":{"style":"/css/style.css?time=1648784103424","message":"/css/message.css?time=1648784103424"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648902385687","sites":"/js/plugins/sites.js?time=1648902385687","friends":"/js/plugins/friends.js?time=1648902385687","parallax":"/js/plugins/parallax.js?time=1648902385687","rightMenu":"/js/plugins/rightMenu.js?time=1648902385687","contributors":"/js/plugins/contributors.js?time=1648902385687","message":"/js/thirdparty/message.js?time=1648902385687","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648902385687","search":"/js/search/hexo.js?time=1648902385687"},"css":{"style":"/css/style.css?time=1648902385687","message":"/css/message.css?time=1648902385687"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Fri Apr 01 2022 11:35:03 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Sat Apr 02 2022 20:26:25 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2392,10 +2401,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>基于Node.js的静态博客框架<br>平台:windows</p>
-<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
-</div><h2 id="2-安装NodeJS"><a href="#2-安装NodeJS" class="headerlink" title="2.安装NodeJS"></a>2.安装NodeJS</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><h1 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h1><h1 id="设置域名"><a href="#设置域名" class="headerlink" title="设置域名"></a>设置域名</h1>
+    <h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0.简介"></a>0.简介</h1><p>基于Node.js的静态博客框架<br>平台:windows</p>
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a><br>版本控制系统<br>安装完后接下来的操作都可用Git bush敲命令</p>
+</div><h2 id="安装NodeJS"><a href="#安装NodeJS" class="headerlink" title="安装NodeJS"></a>安装NodeJS</h2><div class="story post-story"><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>Hexo基于NodeJS<br>需要安装NodeJS和npm工具<br>windows：选择LTS版本即可<br>安装完后打开命令行<br>    node -v<br>    npm -v<br>检查受否安装成功</p>
+</div><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><div class="story post-story"><p>可以先创建一个blog文件夹，然后在命令行中cd到这个文件夹或直接在这个文件夹内右键git bash打开。<br>输入命令：<br>    npm install -g hexo-cli<br>使用<br>    hexo -v<br>检查版本确认安装成功<br>输入<br>    hexo init blogname<br>初始化hexo，blogname可任意起，然后cd到这个文件夹<br>    cd blogname<br>    npm install<br>完成blogname文件夹下有  </p>
+<ul>
+<li>node_modules:依赖包</li>
+<li>public:存放生成的页面</li>
+<li>scaffolds:存放模板</li>
+<li>source:存放文章</li>
+<li>themes:主题</li>
+<li>_config.yml:配置文件<br>输入<br>  hexo g<br>  hexo s<br>在浏览器内输入<a href="localhost:4000">localhost:4000</a>即可看到生成的博客<br>在命令行内ctrl+c关闭服务<h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3></li>
+</ul>
+<h1 id="2-部署"><a href="#2-部署" class="headerlink" title="2.部署"></a>2.部署</h1></div><h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><div class="story post-story"><p>注册登录GitHub后添加一个仓库<br><img src="/2022/03/31/hexo1/1.png" class="lazyload" data-srcset="/2022/03/31/hexo1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>创建一个和用户名相同的仓库，后加github.io<br><img src="/2022/03/31/hexo1/2.png" class="lazyload" data-srcset="/2022/03/31/hexo1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>##生成SSH添加到Github<br>在git bash中输入<br>    git config –global user.name “yourname”<br>    git config –global user.email “youremail”<br>yourname处为Github用户名<br>youremail为注册Github时使用的邮箱<br>然后输入<br>    ssh-keygen -t rsa -C “youremail”<br>创建SSH，一路回车直到告诉已经生成了SSH文件夹<br><img src="/2022/03/31/hexo1/3.png" class="lazyload" data-srcset="/2022/03/31/hexo1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>把id_rsa.pub中的公钥放到Github上<br><img src="/2022/03/31/hexo1/4.png" class="lazyload" data-srcset="/2022/03/31/hexo1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/2022/03/31/hexo1/5.png" class="lazyload" data-srcset="/2022/03/31/hexo1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="/6.png" class="lazyload" data-srcset="/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>将id_rsa.pub中的信息复制到Key中，Title可任取<br>在git hash中输入<br>    ssh T- <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a><br>查看是否成功</p>
+</div><h2 id="将hexo部署到GitHub"><a href="#将hexo部署到GitHub" class="headerlink" title="将hexo部署到GitHub"></a>将hexo部署到GitHub</h2><div class="story post-story"><p>在配置文件_config.yml底部找到deploy修改为：<br>    deploy:<br>    type:  git<br>    repo: <a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a><br>    branch: master<br>yourname为GitHub用户名<br>在命令行输入<br>    npm install hexo-deployer-git –save<br>安装deploy-git<br>在命令行输入<br>    hexo clean<br>    hexo g<br>    hexo d<br>即可在yourname.github.io中查看博客</p>
+<h1 id="设置域名"><a href="#设置域名" class="headerlink" title="设置域名"></a>设置域名</h1>
 </div>
   </div>
   
@@ -2413,10 +2433,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
-              
-                <p>本文永久链接是：<a href=http://maoyufan.world/2022/03/31/hexo1/>http://maoyufan.world/2022/03/31/hexo1/</a></p>
-              
-            
           </blockquote>
         </div>
       
@@ -2431,10 +2447,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-31T22:31:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-01T13:00:05+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年3月31日</p>
+    <p>更新于：2022年4月1日</p>
   </a>
 </div>
 
@@ -2569,7 +2585,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Git"><span class="toc-text">1.安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85NodeJS"><span class="toc-text">2.安装NodeJS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="toc-text">hexo命令</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85NodeJS"><span class="toc-text">安装NodeJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-text">安装hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="toc-text">hexo命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAGitHub%E4%BB%93%E5%BA%93"><span class="toc-text">创建GitHub仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="toc-text">将hexo部署到GitHub</span></a></li></ol>
     </div>
   </section>
 
@@ -2650,43 +2666,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <br><br>
     
       
-        <div class="aplayer-container">
-          
-
-
-        </div>
-      
-    
-      
-        <br>
-        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
         <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.0.0-rc.3" target="_blank" class="codename">Volantis</a>
-        作为主题，总访问量为
-          <span id="busuanzi_value_site_pv"><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-          次
-        
-      
-    
-      
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 🌟事在人为🌟</a></p>
+        <p><a href="/">Copyright © 2022-2025 🌟事在人为🌟</a></p>
 
         </div>
       
@@ -2727,7 +2713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648784103424.js"></script>
+<script src="/js/app.js?time=1648902385687.js"></script>
 
 
 
@@ -2919,7 +2905,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648784103424')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648902385687')</script>
 
 
 
@@ -2932,19 +2918,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648784103424")
+        volantis.js("/js/plugins/sites.js?time=1648902385687")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648784103424")
+        volantis.js("/js/plugins/friends.js?time=1648902385687")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648784103424")
+        volantis.js("/js/plugins/contributors.js?time=1648902385687")
       }
     
   };
@@ -3071,7 +3057,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648784103424");
+    return volantis.js("/js/search/hexo.js?time=1648902385687");
   }
 
   function loadSearchService() {
@@ -3181,7 +3167,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1648784103424').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1648902385687').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3415,7 +3401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maoyufan.world/categories/Hexo/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/03/31/hexo1/","name":"hexo(1)----搭建·部署"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo(1)----搭建·部署","description":"","datePublished":"2022-03-31T09:22:26.000Z","dateModified":"2022-03-31T14:31:57.960Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/03/31/hexo1/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/03/31/hexo1/","wordCount":0,"articleSection":"Hexo","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maoyufan.world/categories/Hexo/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/03/31/hexo1/","name":"hexo(1)----搭建·部署"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo(1)----搭建·部署","description":"","datePublished":"2022-03-31T09:22:26.000Z","dateModified":"2022-04-01T05:00:05.233Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/03/31/hexo1/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/03/31/hexo1/","wordCount":0,"articleSection":"Hexo","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
