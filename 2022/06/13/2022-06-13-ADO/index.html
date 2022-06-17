@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/"/>
+  <link rel="canonical" href="http://maoyufan.world/2022/06/13/2022-06-13-ado/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,21 +20,23 @@
   <meta content="Cheshire Cat" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1655473278792" as="style">
+  <link rel="preload" href="/css/style.css?time=1655473278774" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>cppstream - Cheshire Cat</title>
+  <title>ADO - Cheshire Cat</title>
   <meta name="keywords" content="null">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="cppstream">
-<meta property="og:url" content="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/index.html">
+  <meta name="description" content="主要对象Connection 数据交换的环境 代表同数据源的一个会话  用Open和Close方法建立和释放一个数据库连接用Execute方法执行一个数据操作命令用BeginTrans、CommitTrans和RollbackTrans方法启动、提交和回滚一个处理事务操作the Errors集合获取和处理错误信息操作CommandTimeout属性设置连接的溢出时间操作ConnectionStri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ADO">
+<meta property="og:url" content="http://maoyufan.world/2022/06/13/2022-06-13-ADO/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
+<meta property="og:description" content="主要对象Connection 数据交换的环境 代表同数据源的一个会话  用Open和Close方法建立和释放一个数据库连接用Execute方法执行一个数据操作命令用BeginTrans、CommitTrans和RollbackTrans方法启动、提交和回滚一个处理事务操作the Errors集合获取和处理错误信息操作CommandTimeout属性设置连接的溢出时间操作ConnectionStri">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-18T11:21:16.000Z">
-<meta property="article:modified_time" content="2022-04-18T11:21:16.915Z">
+<meta property="article:published_time" content="2022-06-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-14T04:41:56.896Z">
 <meta property="article:author" content="毛予">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1703,8 +1705,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1655473278792" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1655473278792"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1655473278774" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1655473278774"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1775,7 +1777,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1655473278792","sites":"/js/plugins/sites.js?time=1655473278792","friends":"/js/plugins/friends.js?time=1655473278792","parallax":"/js/plugins/parallax.js?time=1655473278792","rightMenu":"/js/plugins/rightMenu.js?time=1655473278792","contributors":"/js/plugins/contributors.js?time=1655473278792","message":"/js/thirdparty/message.js?time=1655473278792","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1655473278792","search":"/js/search/hexo.js?time=1655473278792"},"css":{"style":"/css/style.css?time=1655473278792","message":"/css/message.css?time=1655473278792"}},
+    cdn: {"js":{"app":"/js/app.js?time=1655473278774","sites":"/js/plugins/sites.js?time=1655473278774","friends":"/js/plugins/friends.js?time=1655473278774","parallax":"/js/plugins/parallax.js?time=1655473278774","rightMenu":"/js/plugins/rightMenu.js?time=1655473278774","contributors":"/js/plugins/contributors.js?time=1655473278774","message":"/js/thirdparty/message.js?time=1655473278774","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1655473278774","search":"/js/search/hexo.js?time=1655473278774"},"css":{"style":"/css/style.css?time=1655473278774","message":"/css/message.css?time=1655473278774"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
     lastupdate: new Date('Fri Jun 17 2022 21:41:18 GMT+0800 (中国标准时间)'),
     sidebar: {
@@ -2428,7 +2430,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/">
+  <link itemprop="mainEntityOfPage" href="http://maoyufan.world/2022/06/13/2022-06-13-ADO/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2449,7 +2451,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        cppstream
+        ADO
       </h1>
       <div class='new-meta-box'>
         
@@ -2466,14 +2468,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-18T19:21:16+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-13T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月18日</p>
+    <p>发布于：2022年6月13日</p>
   </a>
 </div>
 
@@ -2506,8 +2518,86 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
-
+    <h1 id="主要对象"><a href="#主要对象" class="headerlink" title="主要对象"></a>主要对象</h1><h3 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h3><ul>
+<li>数据交换的环境</li>
+<li>代表同数据源的一个会话</li>
+</ul>
+<p>用Open和Close方法建立和释放一个数据库连接<br>用Execute方法执行一个数据操作命令<br>用BeginTrans、CommitTrans和RollbackTrans方法启动、提交和回滚一个处理事务<br>操作the Errors集合获取和处理错误信息<br>操作CommandTimeout属性设置连接的溢出时间<br>操作ConnectionString属性设置连接的字符串<br>操作Mode属性设置连接的模式<br>操作Provider属性指定OLE DB提供者</p>
+<h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><ul>
+<li>对数据源执行命令的定义</li>
+<li>查询数据库并返回一个Recordset对象</li>
+<li>可以执行一个批量的数据操作</li>
+<li>可以操作数据库的结构</li>
+</ul>
+<p>使用Execute方法执行一个查询并将查询结果返回到一个Recordset对象里<br>使用Parameters集合制定命令的参数<br>操作CommandText属性可以为该对象指定一个命令的文本<br>操作CommandType属性可以指定命令的类型<br>操作Prepared可以得知数据提供者是否准备好命令的执行<br>操作CommandTimeout属性可以设置命令执行的溢出时间</p>
+<h3 id="Paramenter"><a href="#Paramenter" class="headerlink" title="Paramenter"></a>Paramenter</h3><ul>
+<li>用于指定参数化查询或者存储过程的参数</li>
+</ul>
+<p>执行AppendChunk方法可以将数据传递到参数里<br>设置Name属性指定参数的名称<br>设置Value属性可以指定参数的值<br>设置Value属性可以指定参数的值</p>
+<h3 id="Recordset"><a href="#Recordset" class="headerlink" title="Recordset"></a>Recordset</h3><ul>
+<li>操纵作为表返回并存储在本地的ADO查询对象</li>
+</ul>
+<p>执行MoveFirst、MoveLast、MoveNext和MovePrevious 方法移动记录集里的光标<br>执行Update方法可以更新数据修改<br>执行AddNew方法可以执行行插入操作<br>执行Delete方法可以删除行<br>设置CursorType属性设置记录集的<strong>光标类型</strong><br>设置CursorLocation属性可以指定光标位置<br>通过读取BOF和EOF属性的值，获知当前光标在记录集里的位置是在最前或者最后  </p>
+<h3 id="Fields"><a href="#Fields" class="headerlink" title="Fields"></a>Fields</h3><ul>
+<li>Recordset对象的一个行由一个或者多个Fields对象组成  </li>
+<li>保存了列的名称，数据类型和值</li>
+<li>修改数据时先修改Recordset对象各个行里Field对象里的值，最后Recordset对象将这些修改提交到数据源</li>
+</ul>
+<p>执行AppendChunk 和GetChunk 方法可以操作列的值<br>通过读取name属性获取列的名称<br>操作Value属性可以改变列的值<br>读取Type、Precision和NumericScale 属性，可获知列的数据类型、精度和小数位的个数  </p>
+<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><ul>
+<li>包含发生错误的详细描述</li>
+<li>这些对象被添加于Connection对象的Errors集合里</li>
+<li>当另外一个ADO对象产生一个错误时，原有的Error对象将被清除</li>
+</ul>
+<p>读取Number和Description属性获得ADO错误号码和对错误的描述<br>读取Source属性得知错误发生的源</p>
+<h3 id="Property"><a href="#Property" class="headerlink" title="Property"></a>Property</h3><ul>
+<li>表了一个由提供者定义的ADO对象的动态特征</li>
+<li>内置Property对象：对象创立时即可见的属性  </li>
+<li>动态Property对象：由数据提供者定义的底层属性，作为Property对象存储Properties集合（例如一个Recordset 对象对事务和更新的支持）</li>
+</ul>
+<h1 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h1><h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><div class="story post-story"><ol>
+<li><p>创建一个Connection对象定义用于连接的字符串信息（数据源名称、用户ID、口令、连接超时、缺省数据库以及光标的位置）</p>
+<ul>
+<li>一个Connection 对象代表了同数据源的一次会话。可以通过Connection 对象控制事务，即执行BeginTrans、CommitTrans和RollbackTrans方法</li>
+</ul>
+</li>
+<li><p>打开数据源，建立同数据源的连接  </p>
+<ul>
+<li>一旦连接成功，就可以运行查询。可以以异步方式运行查询，也可以异步地处理查询结果，ADO会通知提供者后台提供数据。这样可以让应用程序继续处理其它事情而不必等待。</li>
+</ul>
+</li>
+<li><p>执行一个SQL命令  </p>
+</li>
+<li><p>使用结果集，在不同光标类型下浏览和修改行数据  </p>
+</li>
+<li><p>终止连接</p>
+</li>
+</ol>
+</div><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><div class="story post-story"><h3 id="引入ADO库"><a href="#引入ADO库" class="headerlink" title="引入ADO库"></a>引入ADO库</h3><p>Windows下  <code>Program Files\Common Files\System\ado</code>目录中有一个msado*.dll文件（根据版本不同*会有所不同），在软件目录下带上msado*.dll文件可排除软件对运行环境的依赖  </p>
+<p>引入ADO类型库后，程序会在编译时读出msado*.dll中的类型库信息，自动产生两个该类型库的头文件和实现文件msado15.tlh和msado15.tli（在Debug或Release目录下）。在这两个文件里定义了ADO的所有对象和方法，以及一些枚举型的常量等。以下是引入方法：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//引入命令会导致4146警告</span><br><span class="line">#pragma warning(disable:4146)</span><br><span class="line"></span><br><span class="line">//引号里面的路径，可绝对的，可相对的</span><br><span class="line">#import&quot;..\CommFile\Lib\msado15.dll&quot; named_guids \</span><br><span class="line"></span><br><span class="line">//重命名EOF与BOF以免与其他命名空间冲突</span><br><span class="line">rename(&quot;EOF&quot;,&quot;adoEOF&quot;),rename(&quot;BOF&quot;,&quot;adoBOF&quot;)</span><br><span class="line"></span><br><span class="line">#pragma warning(default:4146)</span><br><span class="line"></span><br><span class="line">using namespace ADODB;</span><br></pre></td></tr></table></figure>
+<h3 id="初始化COM"><a href="#初始化COM" class="headerlink" title="初始化COM"></a>初始化COM</h3><p>ADO是COM组件，使用任何COM组件的时候，都要先初始化COM，其实就是在使用COM组件前调用一个API：CoInitialize()，在使用ADO对象之前调用即可，以下为代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HRESULT hr =CoInitialize(NULL);</span><br><span class="line">ASSERT(SUCCEEDED(hr));</span><br><span class="line">//返回值可判断初始化COM是否成功，请用SUCCEEDED来判断</span><br></pre></td></tr></table></figure>
+<p>一般情况下，使用完COM之后，调用反初始化COM函数—-CoUninitialize()。一般会在数据库访问封装类的析构函数中调用</p>
+</div><h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><div class="story post-story"><p>通过创建连接对象连接数据库，首先创建一个指向Connection的指针_ConnectionPtr，以下是创建连接的源码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">_ConnectionPtr  m_pConn;</span><br><span class="line">HRESULT hr =CoInitialize(NULL);</span><br><span class="line">ASSERT(SUCCEEDED(hr));</span><br><span class="line">if (NULL ==m_pConn) </span><br><span class="line">&#123;</span><br><span class="line">	try</span><br><span class="line">    &#123;  //Connecting</span><br><span class="line">    	if (!FAILED(m_pConn.CreateInstance(_uuidof(Connection))))</span><br><span class="line">		&#123; //设置连接超时时间</span><br><span class="line">			m_pConn-&gt;CommandTimeout= 30;                  //设置连接超时值，单位为秒</span><br><span class="line">			if (!FAILED(m_pConn-&gt;Open((_bstr_t)(m_szConnStr), &quot;&quot;, &quot;&quot;,adModeUnknown)))</span><br><span class="line">			return true;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	catch(_com_error e)</span><br><span class="line">	&#123;</span><br><span class="line">		char szLog[MAX_BUFF];memset(szLog, 0, MAX_BUFF);</span><br><span class="line">		sprintf(szLog, &quot;连接数据库错误:%s\n&quot;,(char *)(e.Description()));</span><br><span class="line">	&#125;</span><br><span class="line">	return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Open方法中，第一参数是连接串，以下为一种实用获得连接串的方法：</p>
+<h3 id="获得连接串"><a href="#获得连接串" class="headerlink" title="获得连接串"></a>获得连接串</h3><p>创建一个记事本文件，把文件名(包括扩展名)改成“Test.udl”，双击打开<br>提供程序选择使用的数据库类型<br>连接页中服务器名称输入数据库所在服务器的IP，或者计算机名，或者域名之类（本机地址：127.0.0.1），输入登录信息，选择一个需要连接的数据库，点击测试连接，成功后即可点“确定”关闭窗口。再用记事本打开该文件，即可得到所需连接串。<br>改进方法（把“Test.udl”文件的路径赋给Open方法的第一个参数）：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">char szUdlPath[] =&#123;&quot;.\\Test.udl&quot;&#125;;</span><br><span class="line">//可相对路径，亦可绝对路径</span><br><span class="line">sprintf(m_szConnStr,&quot;File Name=%s&quot;, szUdlPath);</span><br><span class="line">//固定格式</span><br></pre></td></tr></table></figure>
+<p>按这种方法，发行软件的时候，只要相应目录下，放一个“Test.udl”文件即可，数据库的连接可自由配制。方便，实用。</p>
+</div><h2 id="获得记录集"><a href="#获得记录集" class="headerlink" title="获得记录集"></a>获得记录集</h2><div class="story post-story"><p> 与Connection对象一样，先是创建一个RecordSet对象指针，再创建对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">try</span><br><span class="line">&#123;</span><br><span class="line">	if(!FAILED(m_pRecord.CreateInstance(__uuidof(Recordset))))</span><br><span class="line">	&#123;</span><br><span class="line">		HRESULT hr = 0;</span><br><span class="line">		//当连接断开，或者连接对象没有连接的情况下，通过连接串获得记录集</span><br><span class="line">		if (NULL == m_pConn ||adStateClosed == m_pConn-&gt;State)</span><br><span class="line">			hr =m_pRecord-&gt;Open((_bstr_t)szSQL, _variant_t(m_szConnStr),adOpenKeyset, adLockOptimistic,adCmdText);</span><br><span class="line">		else//连接对象处理正常连接状态下，直接使用</span><br><span class="line">			hr = m_pRecord-&gt;Open((_bstr_t)szSQL,m_pConn.GetInterfacePtr(), adOpenKeyset,adLockOptimistic,adCmdText);</span><br><span class="line">		if (SUCCEEDED(hr)) </span><br><span class="line">			bResult = true;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">catch (_com_errore)</span><br><span class="line">&#123;</span><br><span class="line">	char szLog[MAX_BUFF]; memset(szLog, 0,MAX_BUFF);</span><br><span class="line">	sprintf(szLog, &quot;执行SQL查询命令错误:%s[%s]&quot;,(char *)(e.Description()), szSQL);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码中的szSQL是select串，就是查询语句，if与else中m_pRecord有两种Open方式，第一种是连接对象断开，或者没连接状态下，通过连接串获得记录集，第二种连接正常情况下，那么无需再连接，直接通过连接对象获得连接信息。至此，记录集已成功获得，下面是提取数据的问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while(!IsRecordEOF())</span><br><span class="line">&#123;//判断是否到了记录结尾</span><br><span class="line">	UINT nCarID = 0;</span><br><span class="line">	char sCarMark[MAX_BUFF];memset(sCarMark, 0, MAX_BUFF);</span><br><span class="line">	CollectMsg(&quot;CARID&quot;,nCarID);//第一个参数，传列名</span><br><span class="line">	CollectMsg(&quot;Car_Mark&quot;,sCarMark,MAX_BUFF);</span><br><span class="line">	RecordMoveNext();//移动到下一个记录</span><br><span class="line">&#125;</span><br><span class="line">CloseRecord ();//关闭记录集</span><br></pre></td></tr></table></figure>
+<p>以下代码是上述代码的函数实现：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">Bool IsRecordEOF()</span><br><span class="line">&#123;</span><br><span class="line">	bool bResult = true;</span><br><span class="line">	if (NULL != m_pRecord)</span><br><span class="line">	&#123;</span><br><span class="line">		if (!m_pRecord-&gt;adoEOF)</span><br><span class="line">			bResult = false;</span><br><span class="line">	&#125;</span><br><span class="line">	return bResult;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Bool  CollectMsg(const char *szColumnName, int&amp;iTemp)</span><br><span class="line">&#123;</span><br><span class="line">	bool bResult = false;</span><br><span class="line">	if (adStateClosed !=m_pRecord-&gt;State) </span><br><span class="line">	&#123;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			_variant_t Column(szColumnName);</span><br><span class="line">			_variant_t RusultGet= m_pRecord-&gt;Fields-&gt;GetItem(Column)-&gt;Value;</span><br><span class="line">			iTemp =RusultGet.intVal;</span><br><span class="line">			bResult = true;</span><br><span class="line">		&#125;</span><br><span class="line">		catch(_com_error e)</span><br><span class="line">		&#123;</span><br><span class="line">			charszLog[MAX_BUFF]; memset(szLog, 0, MAX_BUFF);</span><br><span class="line">			sprintf(szLog,&quot;%s&quot;, (char *)(e.Description()));</span><br><span class="line">			m_WriteLog.WriteLog(szLog,strlen(szLog), LOG_ERR);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return bResult;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Bool CollectMsg(const char *szColumnName, char*szBuff, int nBuffSize)</span><br><span class="line">&#123;</span><br><span class="line">	bool bResult = false;</span><br><span class="line">	if (adStateClosed !=m_pRecord-&gt;State)</span><br><span class="line">	&#123;</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			_variant_t Column(szColumnName);</span><br><span class="line">			_variant_t RusultGet= m_pRecord-&gt;Fields-&gt;GetItem(Column)-&gt;Value;</span><br><span class="line">			WideCharToMultiByte(CP_ACP,0, RusultGet.bstrVal, -1, szBuff, nBuffSize,NULL, NULL);</span><br><span class="line">			bResult = true;</span><br><span class="line">		&#125;</span><br><span class="line">		catch(_com_error e)</span><br><span class="line">		&#123;</span><br><span class="line">			charszLog[MAX_BUFF]; memset(szLog, 0, MAX_BUFF);</span><br><span class="line">			sprintf(szLog,&quot;%s&quot;, (char *)(e.Description()));</span><br><span class="line">			m_WriteLog.WriteLog(szLog,strlen(szLog), LOG_ERR);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return bResult;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Bool RecordMoveNext()</span><br><span class="line">&#123;</span><br><span class="line">	bool bResult = false;</span><br><span class="line">	if (NULL != m_pRecord)</span><br><span class="line">	&#123;</span><br><span class="line">		if (!m_pRecord-&gt;adoEOF)</span><br><span class="line">		&#123;</span><br><span class="line">			try</span><br><span class="line">			&#123;</span><br><span class="line">				m_pRecord-&gt;MoveNext();</span><br><span class="line">				bResult =true;</span><br><span class="line">			&#125;</span><br><span class="line">			catch(_com_error e)</span><br><span class="line">			&#123;</span><br><span class="line">				charszLog[MAX_BUFF]; memset(szLog, 0, MAX_BUFF);</span><br><span class="line">				sprintf(szLog,&quot;RecordMoveNext错误:%s\n&quot;, (char *)(e.Description()));</span><br><span class="line">				 m_WriteLog.WriteLog(szLog,strlen(szLog), LOG_ERR);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return bResult;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Void  CloseRecord  (void)</span><br><span class="line">&#123;</span><br><span class="line">	try</span><br><span class="line">	&#123;</span><br><span class="line">		if (NULL != m_pRecord)</span><br><span class="line">		&#123;</span><br><span class="line">			m_pRecord-&gt;Close();</span><br><span class="line">			m_pRecord = NULL;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	catch(_com_error e)</span><br><span class="line">	&#123;</span><br><span class="line">		char szLog[MAX_BUFF];memset(szLog, 0, MAX_BUFF);</span><br><span class="line">		sprintf(szLog, &quot;关闭数据记录集错误:%s\n&quot;,(char *)(e.Description()));</span><br><span class="line">		m_WriteLog.WriteLog(szLog,strlen(szLog), LOG_ERR);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;       </span><br></pre></td></tr></table></figure>
+</div><h2 id="执行SQL命令"><a href="#执行SQL命令" class="headerlink" title="执行SQL命令"></a>执行SQL命令</h2><div class="story post-story"><p>可通过Command对象来执行命令，也可以直接通过Connection对象来执行<br>以下介绍通过Connection对象来执行命令<br>命令可以是Updata命令，Insert命令等，以下是代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//第一个参数是要执行的命令，第二个参数用来返回影响的行数</span><br><span class="line">Bool  ExecuteSQL(const char *szSQLStr, long&amp;nRefreshNum)</span><br><span class="line">&#123;</span><br><span class="line">	bool bResult = false;</span><br><span class="line">	if (strlen(szSQLStr) &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		if (NULL == m_pConn ||adStateClosed == m_pConn-&gt;State)</span><br><span class="line">			ConnDB();</span><br><span class="line">		try</span><br><span class="line">		&#123;</span><br><span class="line">			_variant_tRefreshNum;</span><br><span class="line">			m_pConn-&gt;Execute(_bstr_t(szSQLStr),&amp;RefreshNum, adCmdText);</span><br><span class="line">			bResult = true;</span><br><span class="line">			nRefreshNum =RefreshNum.lVal;</span><br><span class="line">		&#125;</span><br><span class="line">		catch (_com_error e)</span><br><span class="line">		&#123;</span><br><span class="line">			nRefreshNum = 0;</span><br><span class="line">			charszLog[MAX_BUFF]; memset(szLog, 0, MAX_BUFF);</span><br><span class="line">			sprintf(szLog,&quot;执行SQL命令错误:%s[%s]&quot;, (char *)(e.Description()), szSQLStr);</span><br><span class="line">			m_WriteLog.WriteLog(szLog,strlen(szLog), LOG_ERR);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">return bResult;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div><h2 id="关闭连接、记录集"><a href="#关闭连接、记录集" class="headerlink" title="关闭连接、记录集"></a>关闭连接、记录集</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (NULL !=m_pConn)</span><br><span class="line">	m_pConn-&gt;Close();</span><br><span class="line">if (NULL !=m_pRecord)&#123;</span><br><span class="line">	m_pRecord-&gt;Close();</span><br></pre></td></tr></table></figure>
+<h1 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h1><p>实现数据库连接，选择操作，其他sql语句通用</p>
+</div><h2 id="h"><a href="#h" class="headerlink" title=".h"></a>.h</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#pragma once</span><br><span class="line">#include &lt;Utils/ExportDefine.h&gt;</span><br><span class="line">#include &lt;Utils/Config.h&gt;</span><br><span class="line"></span><br><span class="line">//收下引入命令会导致4146警告，通过些命令去除</span><br><span class="line">//#pragma warning(disable:4146)</span><br><span class="line"></span><br><span class="line">//引号里面的路径，可绝对的，可相对的</span><br><span class="line">//重命名EOF与BOF以免与其他命名空间冲突</span><br><span class="line">#ifdef _DEBUG</span><br><span class="line">#import &quot;../../_runtime/x64.Debug/msado15.dll&quot; named_guids rename(&quot;EOF&quot;, &quot;adoEOF&quot;), rename(&quot;BOF&quot;, &quot;adoBOF&quot;)</span><br><span class="line">#else</span><br><span class="line">#import &quot;../../_runtime/x64.Release/msado15.dll&quot; named_guids rename(&quot;EOF&quot;, &quot;adoEOF&quot;), rename(&quot;BOF&quot;, &quot;adoBOF&quot;)</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">using namespace ADODB;</span><br><span class="line"></span><br><span class="line">namespace adosql</span><br><span class="line">&#123;</span><br><span class="line">    class UTILS_EXPORT AdoCenter</span><br><span class="line">    &#123;</span><br><span class="line">    public:</span><br><span class="line">        AdoCenter(const string&amp; configFile);</span><br><span class="line">        ~AdoCenter();</span><br><span class="line">        int selectData(const string&amp; sql, vector&lt;string&gt;&amp; results);	//select数据</span><br><span class="line">        int executeSql(const string&amp; sql);							//执行delete和insert等操作</span><br><span class="line">    private:</span><br><span class="line">        bool connect();</span><br><span class="line">    private:</span><br><span class="line">        _ConnectionPtr m_pConn;</span><br><span class="line">        _RecordsetPtr m_pRecordset;</span><br><span class="line">        string m_connStr;</span><br><span class="line">        string m_userId;</span><br><span class="line">        string m_pwd;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div><h2 id="c"><a href="#c" class="headerlink" title=".c"></a>.c</h2><div class="story post-story"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;utils\AdoSql.h&gt;</span><br><span class="line">#include &lt;Utils/LogUtil.h&gt;</span><br><span class="line">using namespace adosql;</span><br><span class="line">using namespace utils;</span><br><span class="line"></span><br><span class="line">AdoCenter::AdoCenter(const string&amp; configFile)</span><br><span class="line">&#123;</span><br><span class="line">    Configuration cfg(configFile);</span><br><span class="line">    cfg.load();</span><br><span class="line">    m_connStr = cfg.read(&quot;ado&quot;, &quot;connectStr&quot;); //连接串获取</span><br><span class="line">    m_userId = cfg.read(&quot;ado&quot;, &quot;userName&quot;);</span><br><span class="line">    m_pwd = cfg.read(&quot;ado&quot;, &quot;password&quot;);</span><br><span class="line">    HRESULT hr = CoInitialize(NULL);</span><br><span class="line">    if (SUCCEEDED(hr)) //返回值可判断初始化COM是否成功，请用SUCCEEDED来判断</span><br><span class="line">    &#123;</span><br><span class="line">        connect();</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        LLogError(&quot;COM CoInitialize HRESULT error&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">AdoCenter::~AdoCenter()</span><br><span class="line">&#123;</span><br><span class="line">    if (NULL != m_pRecordset)</span><br><span class="line">    &#123;</span><br><span class="line">        m_pRecordset-&gt;Close();</span><br><span class="line">    &#125;</span><br><span class="line">    if (NULL != m_pConn)</span><br><span class="line">    &#123;</span><br><span class="line">        m_pConn-&gt;Close();</span><br><span class="line">    &#125;</span><br><span class="line">    CoUninitialize();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bool AdoCenter::connect()</span><br><span class="line">&#123;</span><br><span class="line">    if (NULL == m_pConn || adStateClosed == m_pConn-&gt;State)</span><br><span class="line">    &#123;</span><br><span class="line">        try</span><br><span class="line">        &#123;  //Connecting</span><br><span class="line"></span><br><span class="line">            if (!FAILED(m_pConn.CreateInstance(_uuidof(Connection))))  //设置连接超时时间</span><br><span class="line">            &#123;</span><br><span class="line">                m_pConn-&gt;CommandTimeout = 30;                  //设置连接超时值，单位为秒</span><br><span class="line"></span><br><span class="line">                if (!FAILED(m_pConn-&gt;Open((_bstr_t)(m_connStr.c_str()), &quot;&quot;, &quot;&quot;, adModeUnknown)))</span><br><span class="line">                &#123;</span><br><span class="line">                    return true;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        catch (_com_error e) </span><br><span class="line">        &#123;</span><br><span class="line">            LLogError(&quot;connect to db error:&quot;&lt;&lt;(char*)(e.Description()));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//改方法后文有改进版本</span><br><span class="line">int AdoCenter::selectData(const string&amp; sql, vector&lt;string&gt;&amp; results)</span><br><span class="line">&#123;</span><br><span class="line">    int ret = -1;</span><br><span class="line">    if (NULL == m_pConn || adStateClosed == m_pConn-&gt;State)</span><br><span class="line">    &#123;</span><br><span class="line">        connect();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    try</span><br><span class="line">    &#123;</span><br><span class="line">        //这里每次调用都创建实例比较慢   </span><br><span class="line">        if (!FAILED(m_pRecordset.CreateInstance(__uuidof(Recordset))))</span><br><span class="line">        &#123;</span><br><span class="line">            m_pRecordset-&gt;Open((_bstr_t)sql.c_str(), _variant_t((IDispatch*)m_pConn, true),</span><br><span class="line">                adOpenKeyset, adLockOptimistic, adCmdText);</span><br><span class="line">            long line = 0;</span><br><span class="line">            while (NULL != m_pRecordset &amp;&amp; !m_pRecordset-&gt;adoEOF &amp;&amp; adStateClosed != m_pRecordset-&gt;State)</span><br><span class="line">            &#123;</span><br><span class="line">                long count = m_pRecordset-&gt;Fields-&gt;Count;</span><br><span class="line">                ++line;</span><br><span class="line">                stringstream ss;</span><br><span class="line">                ss &lt;&lt; line;</span><br><span class="line">                for (long i = 0; i &lt; count; ++i)</span><br><span class="line">                &#123;</span><br><span class="line">                    //按名称获取数据</span><br><span class="line">                    //_variant_t Column(&quot;lastUpdDt&quot;);</span><br><span class="line">                     //_variant_t RusultGet = m_pRecordset-&gt;Fields-&gt;GetItem(Column)-&gt;Value;</span><br><span class="line"></span><br><span class="line">                    //按列序号，从0开始</span><br><span class="line">                    _variant_t rusultGet = m_pRecordset-&gt;Fields-&gt;GetItem(long(i))-&gt;Value;</span><br><span class="line">                   </span><br><span class="line">                    char midData[MAXCHAR] = &#123; 0 &#125;;</span><br><span class="line">                    rusultGet.ChangeType(VT_BSTR);//统一转成字符串，否则下面有可能出错</span><br><span class="line">                    WideCharToMultiByte(CP_ACP, 0, rusultGet.bstrVal, -1, midData, MAXCHAR, NULL, NULL);</span><br><span class="line">                    ss &lt;&lt; &quot;,&quot; &lt;&lt; midData;</span><br><span class="line">                &#125;</span><br><span class="line">                results.emplace_back(ss.str());</span><br><span class="line">                m_pRecordset-&gt;MoveNext();</span><br><span class="line">            &#125;</span><br><span class="line">            m_pRecordset-&gt;Close();</span><br><span class="line">            m_pRecordset = NULL;</span><br><span class="line">            ret = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            LLogError(&quot;create m_pRecordset failed&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    catch (_com_error e)</span><br><span class="line">    &#123;</span><br><span class="line">        LLogError(&quot;Execute sql error:&quot; &lt;&lt; (char*)(e.Description()) &lt;&lt; &quot; sql=&quot; &lt;&lt; sql);</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int AdoCenter::executeSql(const string&amp; sql)</span><br><span class="line">&#123;</span><br><span class="line">    int ret = -1;</span><br><span class="line"></span><br><span class="line">    if (sql.size() &gt; 0) </span><br><span class="line">    &#123;</span><br><span class="line">        if (NULL == m_pConn || adStateClosed == m_pConn-&gt;State)</span><br><span class="line">        &#123;</span><br><span class="line">            connect();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            _variant_t RefreshNum;</span><br><span class="line">            m_pConn-&gt;Execute(_bstr_t(sql.c_str()), &amp;RefreshNum, adCmdText);</span><br><span class="line">            //ret = RefreshNum.lVal; //更新行数</span><br><span class="line">            ret = 0;</span><br><span class="line">        &#125;</span><br><span class="line">        catch (_com_error e)</span><br><span class="line">        &#123;</span><br><span class="line">            LLogError(&quot;Execute sql error:&quot;&lt;&lt; (char*)(e.Description())&lt;&lt;&quot;, sql:&quot; &lt;&lt; sql);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
   </div>
   
   
@@ -2538,10 +2628,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-18T19:21:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-14T12:41:56+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月18日</p>
+    <p>更新于：2022年6月14日</p>
   </a>
 </div>
 
@@ -2565,17 +2655,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/18/2022-04-18-cppclass/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>cppclass</p>
+        <a class='prev' href='/2022/06/16/2022-06-16-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>图像识别</p>
           <p class='content'>
+对象按照类的形象创建，对象是类的实例对象的函数称为方法
+
+类同时定义了形象和行为
+
 </p>
         </a>
       
       
-        <a class='next' href='/2022/04/14/2022-04-14-%E5%A4%A9%E7%8B%97/'>
-          <p class='title'>天狗<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>郭沫若我是一条天狗呀！我把月来吞了，我把日来吞了，我把一切的星球来吞了，我把全宇宙来吞了。我便是我了！  
-我是月的光，我是日的光，我是一切星球的光，我是X光线的光，我是全宇宙Energy的总量...</p>
+        <a class='next' href='/2022/05/21/2022-05-21-%E5%BE%97%E9%81%93%E5%A4%9A%E5%8A%A9/'>
+          <p class='title'>得道多助，失道寡助<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>孟子　　天时不如地利，地利不如人和。三里之城，七里之郭，环而攻之而不胜。夫环而攻之，必有得天时者矣，然而不胜者，是天时不如地利也。城非不高也，池非不深也，兵革非不坚利也，米粟非不多也，委而去之，...</p>
         </a>
       
     </div>
@@ -2603,9 +2696,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Connection"><span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Command"><span class="toc-text">Command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Paramenter"><span class="toc-text">Paramenter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Recordset"><span class="toc-text">Recordset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fields"><span class="toc-text">Fields</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error"><span class="toc-text">Error</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Property"><span class="toc-text">Property</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">操作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5ADO%E5%BA%93"><span class="toc-text">引入ADO库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96COM"><span class="toc-text">初始化COM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">连接数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E8%BF%9E%E6%8E%A5%E4%B8%B2"><span class="toc-text">获得连接串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E8%AE%B0%E5%BD%95%E9%9B%86"><span class="toc-text">获得记录集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8CSQL%E5%91%BD%E4%BB%A4"><span class="toc-text">执行SQL命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E8%BF%9E%E6%8E%A5%E3%80%81%E8%AE%B0%E5%BD%95%E9%9B%86"><span class="toc-text">关闭连接、记录集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#h"><span class="toc-text">.h</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c"><span class="toc-text">.c</span></a>
+    </div>
+  </section>
 
   
 
@@ -2655,7 +2758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="cppstream";
+  pdata.postTitle="ADO";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2731,7 +2834,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1655473278792.js"></script>
+<script src="/js/app.js?time=1655473278774.js"></script>
 
 
 
@@ -2923,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1655473278792')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1655473278774')</script>
 
 
 
@@ -2936,19 +3039,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1655473278792")
+        volantis.js("/js/plugins/sites.js?time=1655473278774")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1655473278792")
+        volantis.js("/js/plugins/friends.js?time=1655473278774")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1655473278792")
+        volantis.js("/js/plugins/contributors.js?time=1655473278774")
       }
     
   };
@@ -3026,7 +3129,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1655473278792");
+    return volantis.js("/js/search/hexo.js?time=1655473278774");
   }
 
   function loadSearchService() {
@@ -3136,7 +3239,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1655473278792').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1655473278774').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3370,7 +3473,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/","name":"cppstream"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"cppstream","description":"","datePublished":"2022-04-18T11:21:16.000Z","dateModified":"2022-04-18T11:21:16.915Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maoyufan.world/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/06/13/2022-06-13-ADO/","name":"ADO"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ADO","description":"","datePublished":"2022-06-12T16:00:00.000Z","dateModified":"2022-06-14T04:41:56.896Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/06/13/2022-06-13-ADO/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/06/13/2022-06-13-ADO/","wordCount":0,"articleSection":"数据库","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

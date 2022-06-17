@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/"/>
+  <link rel="canonical" href="http://maoyufan.world/2022/06/16/2022-06-16-图像识别/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,21 +20,23 @@
   <meta content="Cheshire Cat" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1655473278792" as="style">
+  <link rel="preload" href="/css/style.css?time=1655473278770" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>cppstream - Cheshire Cat</title>
+  <title>图像识别 - Cheshire Cat</title>
   <meta name="keywords" content="null">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="cppstream">
-<meta property="og:url" content="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/index.html">
+  <meta name="description" content="对象按照类的形象创建，对象是类的实例对象的函数称为方法  类同时定义了形象和行为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图像识别">
+<meta property="og:url" content="http://maoyufan.world/2022/06/16/2022-06-16-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
+<meta property="og:description" content="对象按照类的形象创建，对象是类的实例对象的函数称为方法  类同时定义了形象和行为">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-18T11:21:16.000Z">
-<meta property="article:modified_time" content="2022-04-18T11:21:16.915Z">
+<meta property="article:published_time" content="2022-06-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-16T16:45:22.612Z">
 <meta property="article:author" content="毛予">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://maoyufan.world/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1703,8 +1705,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1655473278792" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1655473278792"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1655473278770" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1655473278770"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1775,7 +1777,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1655473278792","sites":"/js/plugins/sites.js?time=1655473278792","friends":"/js/plugins/friends.js?time=1655473278792","parallax":"/js/plugins/parallax.js?time=1655473278792","rightMenu":"/js/plugins/rightMenu.js?time=1655473278792","contributors":"/js/plugins/contributors.js?time=1655473278792","message":"/js/thirdparty/message.js?time=1655473278792","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1655473278792","search":"/js/search/hexo.js?time=1655473278792"},"css":{"style":"/css/style.css?time=1655473278792","message":"/css/message.css?time=1655473278792"}},
+    cdn: {"js":{"app":"/js/app.js?time=1655473278770","sites":"/js/plugins/sites.js?time=1655473278770","friends":"/js/plugins/friends.js?time=1655473278770","parallax":"/js/plugins/parallax.js?time=1655473278770","rightMenu":"/js/plugins/rightMenu.js?time=1655473278770","contributors":"/js/plugins/contributors.js?time=1655473278770","message":"/js/thirdparty/message.js?time=1655473278770","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1655473278770","search":"/js/search/hexo.js?time=1655473278770"},"css":{"style":"/css/style.css?time=1655473278770","message":"/css/message.css?time=1655473278770"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
     lastupdate: new Date('Fri Jun 17 2022 21:41:18 GMT+0800 (中国标准时间)'),
     sidebar: {
@@ -2428,7 +2430,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://maoyufan.world/2022/04/18/2022-04-18-cppstream/">
+  <link itemprop="mainEntityOfPage" href="http://maoyufan.world/2022/06/16/2022-06-16-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2449,7 +2451,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        cppstream
+        图像识别
       </h1>
       <div class='new-meta-box'>
         
@@ -2466,14 +2468,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">神经网络</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" itemprop="url"><span itemprop="name">神经网络</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Python/" itemprop="url"><span itemprop="name">Python</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-04-18T19:21:16+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-16T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年4月18日</p>
+    <p>发布于：2022年6月16日</p>
   </a>
 </div>
 
@@ -2506,7 +2522,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <blockquote>
+<p>对象按照类的形象创建，对象是类的实例<br>对象的函数称为方法</p>
+</blockquote>
+<p>类同时定义了形象和行为</p>
+
 
   </div>
   
@@ -2538,10 +2558,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-18T19:21:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-17T00:45:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年4月18日</p>
+    <p>更新于：2022年6月17日</p>
   </a>
 </div>
 
@@ -2565,17 +2585,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/04/18/2022-04-18-cppclass/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>cppclass</p>
-          <p class='content'>
-</p>
-        </a>
       
-      
-        <a class='next' href='/2022/04/14/2022-04-14-%E5%A4%A9%E7%8B%97/'>
-          <p class='title'>天狗<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>郭沫若我是一条天狗呀！我把月来吞了，我把日来吞了，我把一切的星球来吞了，我把全宇宙来吞了。我便是我了！  
-我是月的光，我是日的光，我是一切星球的光，我是X光线的光，我是全宇宙Energy的总量...</p>
+        <a class='next' href='/2022/06/13/2022-06-13-ADO/'>
+          <p class='title'>ADO<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>主要对象Connection
+数据交换的环境
+代表同数据源的一个会话
+
+用Open和Close方法建立和释放一个数据库连接用Execute方法执行一个数据操作命令用BeginTrans、Comm...</p>
         </a>
       
     </div>
@@ -2655,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="cppstream";
+  pdata.postTitle="图像识别";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2731,7 +2748,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1655473278792.js"></script>
+<script src="/js/app.js?time=1655473278770.js"></script>
 
 
 
@@ -2923,7 +2940,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1655473278792')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1655473278770')</script>
 
 
 
@@ -2936,19 +2953,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1655473278792")
+        volantis.js("/js/plugins/sites.js?time=1655473278770")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1655473278792")
+        volantis.js("/js/plugins/friends.js?time=1655473278770")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1655473278792")
+        volantis.js("/js/plugins/contributors.js?time=1655473278770")
       }
     
   };
@@ -3026,7 +3043,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1655473278792");
+    return volantis.js("/js/search/hexo.js?time=1655473278770");
   }
 
   function loadSearchService() {
@@ -3136,7 +3153,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1655473278792').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1655473278770').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -3370,7 +3387,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/","name":"cppstream"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"cppstream","description":"","datePublished":"2022-04-18T11:21:16.000Z","dateModified":"2022-04-18T11:21:16.915Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/04/18/2022-04-18-cppstream/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://maoyufan.world/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maoyufan.world/categories/神经网络/","name":"神经网络"}},{"@type":"ListItem","position":2,"item":{"@id":"http://maoyufan.world/categories/Python/","name":"Python"}},{"@type":"ListItem","position":3,"item":{"@id":"http://maoyufan.world/2022/06/16/2022-06-16-图像识别/","name":"图像识别"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"图像识别","description":"","datePublished":"2022-06-15T16:00:00.000Z","dateModified":"2022-06-16T16:45:22.612Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://maoyufan.world/2022/06/16/2022-06-16-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/"},"author":{"@type":"Person","name":"毛予","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://maoyufan.world/2022/06/16/2022-06-16-%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/","wordCount":0,"articleSection":"神经网络","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
