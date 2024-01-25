@@ -267,103 +267,6 @@ button {
   overflow: hidden;
   margin-bottom: -100px;
 }
-.cover-wrapper .cover-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-}
-.cover-wrapper .cover-bg.lazyload.loaded {
-  animation-delay: 0s;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  animation-name: fadeIn;
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -khtml-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-  }
-}
 .cover-wrapper .cover-body {
   z-index: 1;
   position: relative;
@@ -827,6 +730,71 @@ button {
   .cover-wrapper.dock .menu {
     background: rgba(255,255,255,0.5);
     backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
   }
 }
 @font-face {
@@ -1742,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1703501229295),
+    lastupdate: new Date(1706173446347),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2441,7 +2409,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="full" class='cover-wrapper  dock' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://pic.imgdb.cn/item/65895489c458853aeffa7b84.jpg"></div>
+  <div id="parallax-window"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2521,6 +2489,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
+          
+        
+          
+        
+          
+        
+          
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -2559,7 +2569,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2023/07/06/3010TheRoadNotTaken/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/24/3026缺氧石油理论/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2577,35 +2587,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/06/3010TheRoadNotTaken/"  itemprop="url">
-        The Road Not Taken
+      <a href="/2024/01/24/3026%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E7%90%86%E8%AE%BA/"  itemprop="url">
+        缺氧石油理论
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <p>中文名: 未选择的路</p>
-<p><em>Robert Frost</em></p>
+      
+        
+裂化(cracking)：是指一种使烃类分子分裂为几个较小分子的反应过程。裂化以生产汽油、煤油和柴油等轻质油品为目的。裂解(pyrolysis)：是指通过热能将一种样品(主要指高分子化合物)转变成另外几种物质(主要指低分子化合物)的过程。裂解旨在生产乙烯、丙烯、丁烯、丁二烯等基本化工原料
+
+缺氧中的裂化指原油在高温下转化为石油的过程，而裂解指石油在高温下转化为高硫甲烷的过程。物质变化有如下...
+      
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-07-06T00:00:00+08:00">2023-07-06</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-24T00:00:00+08:00">2024-01-24</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/">诗词和文章</a>
+          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" itemprop="url"><span itemprop="name">诗词和文章</span></a>
+              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/06/3010TheRoadNotTaken/' itemprop="url">
+          <a class='readmore' href='/2024/01/24/3026%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E7%90%86%E8%AE%BA/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2621,7 +2635,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2023/07/05/3008逻辑学导论/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/23/3022周易卦名概略/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2639,38 +2653,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/05/3008%E9%80%BB%E8%BE%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/"  itemprop="url">
-        逻辑学导论
+      <a href="/2024/01/23/3022%E5%91%A8%E6%98%93%E5%8D%A6%E5%90%8D%E6%A6%82%E7%95%A5/"  itemprop="url">
+        周易卦名概略
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <p>内容来自b站网课《逻辑学》（陈晓平教授）</p>
+      
+        总论道家著作有着相同的思想内核，例如物极必反，相反相成等。学习它们企图把握世界变化的规律，但是“道”终究是不可捉摸的，与其说把握变化的规律，不如说是认识存在的无奈。《道德经》阐述道家学说的思想方法，《周易》则是对这种思想方法的实际运用。由表及里由里及表是合适的顺序。
+六十四卦的记忆挂名次序歌朱熹作
+
+乾坤屯（zhūn）蒙需讼师， 比小畜兮履泰否，同人大有谦豫随， 蛊临观兮噬嗑（适合）贲（毕）...
+      
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-07-05T00:00:00+08:00">2023-07-05</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-23T00:00:00+08:00">2024-01-23</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%93%B2%E5%AD%A6/">哲学</a><span class="sep"></span><a class="category-link" href="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/">逻辑学</a>
+          <a class="category-link" href="/categories/%E5%93%B2%E5%AD%A6/">哲学</a><span class="sep"></span><a class="category-link" href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/">玄学</a><span class="sep"></span><a class="category-link" href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/">周易</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
               <a href="/categories/%E5%93%B2%E5%AD%A6/" itemprop="url"><span itemprop="name">哲学</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/" itemprop="url"><span itemprop="name">逻辑学</span></a>
+              <a href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/" itemprop="url"><span itemprop="name">玄学</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/" itemprop="url"><span itemprop="name">周易</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/05/3008%E9%80%BB%E8%BE%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/' itemprop="url">
+          <a class='readmore' href='/2024/01/23/3022%E5%91%A8%E6%98%93%E5%8D%A6%E5%90%8D%E6%A6%82%E7%95%A5/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2686,7 +2709,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2023/06/29/3004代码命名规范/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/23/3024缺氧炼钢初步/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2704,17 +2727,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/29/3004%E4%BB%A3%E7%A0%81%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"  itemprop="url">
-        代码命名规范
+      <a href="/2024/01/23/3024%E7%BC%BA%E6%B0%A7%E7%82%BC%E9%92%A2%E5%88%9D%E6%AD%A5/"  itemprop="url">
+        缺氧炼钢初步
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        传统代码命名法1.Pascal命名法每个单词的第一个字母大写2.Camel命名法除了第一个单词, 每个单词第一个字母大写3.下划线命名法单词之间用下划线连接4.匈牙利命名法属性+类型+对象描述
-命名原则用Pascal规则命名方法和类型用Camel规则命名局部变量和方法参数成员变量使用前缀_接口名称使用前缀I
+        资源要求炼钢原料（每100kg钢）
 
+铁70kg
+精炼煤炭20kg
+石灰10kg
+
+炼钢系统需要用到石油和原油。石油可作为冷却液，石油和原油配合可作蒸气室的水门（油门）。
+炼钢理论产生钢材的金属精炼器进行生产时需要通入冷却液并流出加热后的冷却液，因此选择吸热较强、高温不易相变的冷却液是重要的。一些液体的相变温度和比热容如下：
+
+
+
+元素
+熔点
+沸点
+比热容
+
+
+
+水
+-0.65
+99.35
+...
       
     
   </div>
@@ -2722,20 +2764,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-06-29T00:00:00+08:00">2023-06-29</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-23T00:00:00+08:00">2024-01-23</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Code/">Code</a>
+          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Code/" itemprop="url"><span itemprop="name">Code</span></a>
+              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/06/29/3004%E4%BB%A3%E7%A0%81%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/' itemprop="url">
+          <a class='readmore' href='/2024/01/23/3024%E7%BC%BA%E6%B0%A7%E7%82%BC%E9%92%A2%E5%88%9D%E6%AD%A5/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2751,7 +2793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2023/06/29/3005Pandas@Python/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/23/3023缺氧石油区开发初步/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2769,18 +2811,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/29/3005Pandas@Python/"  itemprop="url">
-        Pandas@Python
+      <a href="/2024/01/23/3023%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E5%8C%BA%E5%BC%80%E5%8F%91%E5%88%9D%E6%AD%A5/"  itemprop="url">
+        缺氧石油区开发初步
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        12import numpy as npimport pandas as pd
-
-pandas是基于Numpy的工具, 为解决数据分析任务而诞生.
-I 数据定义1.1 Series类似一维数组对象, 由一组数据(value)及一组与之相关的索引(index)组成, 默认index从0开始. Numpy的数组通过隐式定义的整数索引获得数值, 而Pandas的Series对象用一种显示定义的索引...
+        总述石油发电是缺氧中稳定电力的重要来源，一台石油发电机可提供2000W电力，可通用高压线干线连接石油区，工业区，生活区。此外石油也是生产塑料的原料和良好的冷却剂。但游戏中提供的原油精炼设备转化率仅有50%，若不想损失质量，可利用利用地热能裂化石油以达到100%转化率，详见石油裂化。
+石油区开发开发原油区首先要面临的是温度问题，金贡齐设备的过热温度为125度，原油温度约为100度，长期稳定运行...
       
     
   </div>
@@ -2788,24 +2828,20 @@ I 数据定义1.1 Series类似一维数组对象, 由一组数据(value)及一�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-06-29T00:00:00+08:00">2023-06-29</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-23T00:00:00+08:00">2024-01-23</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Code/">Code</a><span class="sep"></span><a class="category-link" href="/categories/Code/Python/">Python</a>
+          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Code/" itemprop="url"><span itemprop="name">Code</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Code/Python/" itemprop="url"><span itemprop="name">Python</span></a>
+              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/06/29/3005Pandas@Python/' itemprop="url">
+          <a class='readmore' href='/2024/01/23/3023%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E5%8C%BA%E5%BC%80%E5%8F%91%E5%88%9D%E6%AD%A5/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2821,7 +2857,7 @@ I 数据定义1.1 Series类似一维数组对象, 由一组数据(value)及一�
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2023/06/28/3003Numpy@Python/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/14/3021缺氧精炼菜单/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2839,16 +2875,19 @@ I 数据定义1.1 Series类似一维数组对象, 由一组数据(value)及一�
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/28/3003Numpy@Python/"  itemprop="url">
-        NumPy@Python
+      <a href="/2024/01/14/3021%E7%BC%BA%E6%B0%A7%E7%B2%BE%E7%82%BC%E8%8F%9C%E5%8D%95/"  itemprop="url">
+        缺氧精炼菜单
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Python使用NumPy包完成了对N维数组的快速便捷操作. SciPy包以NumPy包为基础, 扩展了numpy的能力.SciPy在最外层命名空间中包括了所有的NumPy内容，使用时仅需import scipy, 而不必再单独 import numpy.numpy的基本类型是数组(array),  矩阵(maxtix)类为array的子类, 继承了其一切特性.
-import numpy a...
+        1.堆肥堆造价金属矿石800kg消耗污染土、会腐烂的食物、种子100kg生产泥土100kg是否需要操作是是否可用信号控制否
+2.碎石机造价金属矿石800kg消耗电力240W各种原料生产纯铝、石灰、沙子、铜、金、铁、食盐、铌、钨是否需要操作是是否可用信号控制是
+3.窑炉造价金属矿石200kg消耗
+生产精炼碳、石灰是否需要操作否是否可用信号控制是
+4.肥料合成器造价金属矿石200kg消耗电力12...
       
     
   </div>
@@ -2856,24 +2895,20 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-06-28T00:00:00+08:00">2023-06-28</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-14T00:00:00+08:00">2024-01-14</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Code/">Code</a><span class="sep"></span><a class="category-link" href="/categories/Code/Python/">Python</a>
+          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Code/" itemprop="url"><span itemprop="name">Code</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Code/Python/" itemprop="url"><span itemprop="name">Python</span></a>
+              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/06/28/3003Numpy@Python/' itemprop="url">
+          <a class='readmore' href='/2024/01/14/3021%E7%BC%BA%E6%B0%A7%E7%B2%BE%E7%82%BC%E8%8F%9C%E5%8D%95/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2889,7 +2924,7 @@ import numpy a...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/08/24/1008线性代数/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/07/3019带菌菌泥处理/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2907,23 +2942,19 @@ import numpy a...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/24/1008%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"  itemprop="url">
-        线性代数
+      <a href="/2024/01/07/3019%E5%B8%A6%E8%8F%8C%E8%8F%8C%E6%B3%A5%E5%A4%84%E7%90%86/"  itemprop="url">
+        菌泥的处理
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        一、线性方程组和矩阵线性方程组a11x1+···+a1nxn=b1···am1x1+···+amnxn=bn几何解释：n个m维空间相互交叠产生的公共区域线性方程组↓矩阵（增广矩阵）  
+        处理杀菌氯气杀菌：暴露在大于2kg的氯气中漂白石杀菌：同漂白石放在同一个压缩机中（漂白石不会被消耗）
+预防空气预防设置空气净化器
+复制人预防途经处设置洗手池（消耗漂白石最佳，正常洗手池也可）
+用途通过藻类蒸馏器转化为藻类
 
-变换对换数乘倍加初等变换后解不变
-
-线性方程组求解方法：化简为接阶梯矩阵  
-
-矩阵运算加法数乘乘法*不满足交换律转置：T 对于对称矩阵，有A=AT逆运算分块
-
-可逆矩阵对于可逆矩阵A，存在逆矩阵A-1，有...
       
     
   </div>
@@ -2931,24 +2962,20 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-08-24T00:00:00+08:00">2022-08-24</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-07T00:00:00+08:00">2024-01-07</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url"><span itemprop="name">数学</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">线性代数</span></a>
+              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/08/24/1008%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/' itemprop="url">
+          <a class='readmore' href='/2024/01/07/3019%E5%B8%A6%E8%8F%8C%E8%8F%8C%E6%B3%A5%E5%A4%84%E7%90%86/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2964,7 +2991,7 @@ import numpy a...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/06/25/1007鱼鳃/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/05/3018阿黛尔的生活/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2982,17 +3009,16 @@ import numpy a...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/25/1007%E9%B1%BC%E9%B3%83/"  itemprop="url">
-        鱼鳃的呼吸方式
+      <a href="/2024/01/05/3018%E9%98%BF%E9%BB%9B%E5%B0%94%E7%9A%84%E7%94%9F%E6%B4%BB/"  itemprop="url">
+        阿黛尔的生活
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        水蛭，蚯蚓没有鳃也没有肺而通过皮肤呼吸。作为气体交换膜的皮肤需要足够湿润且足够薄。皮肤较薄对于生存来说代价高昂。此外气体交换效率与皮肤面积正相关而动物耗能与体重正相关，再者高级器官（如大脑）会显著增加氧气需求。
-鱼鳃上有许多鳃丝，鳃丝内有密布的毛细血管。柔软的鳃丝被坚硬的鳃盖保护，且满足了薄、湿润、表面积巨大的特点。鱼通过吞咽水，使水流充分流过鳃丝。  
-上岸后鳃丝不能保持湿润，降低了气体交...
+        应当关注：食物，蓝色
+
       
     
   </div>
@@ -3000,20 +3026,20 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-06-25T00:00:00+08:00">2022-06-25</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-05T00:00:00+08:00">2024-01-05</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%B1%BC/">鱼</a>
+          <a class="category-link" href="/categories/%E7%94%B5%E5%BD%B1/">电影</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%B1%BC/" itemprop="url"><span itemprop="name">鱼</span></a>
+              <a href="/categories/%E7%94%B5%E5%BD%B1/" itemprop="url"><span itemprop="name">电影</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/06/25/1007%E9%B1%BC%E9%B3%83/' itemprop="url">
+          <a class='readmore' href='/2024/01/05/3018%E9%98%BF%E9%BB%9B%E5%B0%94%E7%9A%84%E7%94%9F%E6%B4%BB/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3029,7 +3055,7 @@ import numpy a...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/06/20/1006数据库拾遗/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/03/3017电力系统电压/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -3047,23 +3073,17 @@ import numpy a...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/20/1006%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8B%BE%E9%81%97/"  itemprop="url">
-        数据库拾遗
+      <a href="/2024/01/03/3017%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E7%94%B5%E5%8E%8B/"  itemprop="url">
+        电力系统电压
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        创建和使用临时表方法一：
-123456CREATE TABLE #临时表名(字段1 约束条件,字段2 约束条件,···)
+        电力系统电压等级相电压与线电压线电压（line to line / phase to phase voltage）相电压（phase to neutral voltage）中文下的相电压指相对地电电压，线电压至线对线电压。英文中线和相等意。
+电力系统分析中标注的电压电力系统分析中默认使用Y型接法，标注线电压和线电流
 
-方法二：
-123SELECT * INTO #临时表名FROM 现存表
-
-#为局部临时表，##为全局临时表删除临时表：
-1DROP TABLE #临时表名
-表的遍历12345678910111213/*声明一个游标i*/DECLARE i cursor FORSELEC...
       
     
   </div>
@@ -3071,20 +3091,20 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-06-20T00:00:00+08:00">2022-06-20</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-03T00:00:00+08:00">2024-01-03</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+          <a class="category-link" href="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/">电力系统分析</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+              <a href="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" itemprop="url"><span itemprop="name">电力系统分析</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/06/20/1006%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8B%BE%E9%81%97/' itemprop="url">
+          <a class='readmore' href='/2024/01/03/3017%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E7%94%B5%E5%8E%8B/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3100,7 +3120,7 @@ import numpy a...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/05/21/1005得道多助/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/02/3016Cartographer建图/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -3118,16 +3138,24 @@ import numpy a...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/21/1005%E5%BE%97%E9%81%93%E5%A4%9A%E5%8A%A9/"  itemprop="url">
-        得道多助，失道寡助
+      <a href="/2024/01/02/3016Cartographer%E5%BB%BA%E5%9B%BE/"  itemprop="url">
+        Cartographer建图
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        孟子　　天时不如地利，地利不如人和。三里之城，七里之郭，环而攻之而不胜。夫环而攻之，必有得天时者矣，然而不胜者，是天时不如地利也。城非不高也，池非不深也，兵革非不坚利也，米粟非不多也，委而去之，是地利不如人和也。故曰：域民不以封疆之界，固国不以山溪之险，威天下不以兵革之利。得道者多助，失道者寡助。寡助之至，亲戚畔之；多助之至，天下顺之。以天下之所顺，攻亲戚之所畔，故君子有不战，战必胜矣。
+        准备Ubuntu 20.04ROS noeticCartographer工作环境见前文
+1.建图功能包创建在gazebo_test_ws/src下创建建图功能包gazebo_map
+cd gazebo_test_ws/src
+catkin_create_pkg gazebo_map
 
+编译环境
+cd ..
+catkin_make 
+
+将工作空间添加至.bashrc每打开一个新的命令行都将先加...
       
     
   </div>
@@ -3135,20 +3163,24 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-05-21T02:05:00+08:00">2022-05-21</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-02T23:00:00+08:00">2024-01-02</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/">诗词和文章</a>
+          <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a><span class="sep"></span><a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/">ROS</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" itemprop="url"><span itemprop="name">诗词和文章</span></a>
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="url"><span itemprop="name">机器人</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/" itemprop="url"><span itemprop="name">ROS</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/05/21/1005%E5%BE%97%E9%81%93%E5%A4%9A%E5%8A%A9/' itemprop="url">
+          <a class='readmore' href='/2024/01/02/3016Cartographer%E5%BB%BA%E5%9B%BE/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3164,7 +3196,7 @@ import numpy a...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/05/16/1004如歌的行板/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/02/3015Cartographer安装/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -3182,16 +3214,23 @@ import numpy a...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/05/16/1004%E5%A6%82%E6%AD%8C%E7%9A%84%E8%A1%8C%E6%9D%BF/"  itemprop="url">
-        如歌的行板
+      <a href="/2024/01/02/3015Cartographer%E5%AE%89%E8%A3%85/"  itemprop="url">
+        Cartographer安装
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        痖弦温柔之必要肯定之必要一点点酒和木犀花之必要正正经经看一名女子走过之必要君非海明威此一起码认识之必要欧战，雨，加农炮，天气与红十字会之必要散步之必要遛狗之必要薄荷茶之必要每晚七点钟自证券交易所彼端草一般漂起来的谣言之必要。旋转玻璃门之必要盘尼西林之必要，暗杀之必要，晚报之必要。穿法兰绒长裤之必要，马票之必要姑母继承遗产之必要阳台，海，微笑之必要懒洋洋之必要  
-而既被目为一条河总得继续流下...
+        官网教程
+1.安装依赖sudo apt-get update
+sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
+
+2.建立工作空间并下载源码mkdir cartographer_ws
+cd cartographer_ws
+mkdir src
+cd src
+git clone https://githu...
       
     
   </div>
@@ -3199,20 +3238,24 @@ import numpy a...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-05-16T11:44:24+08:00">2022-05-16</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-02T18:00:00+08:00">2024-01-02</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/">诗词和文章</a>
+          <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a><span class="sep"></span><a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/">ROS</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" itemprop="url"><span itemprop="name">诗词和文章</span></a>
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="url"><span itemprop="name">机器人</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/" itemprop="url"><span itemprop="name">ROS</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/05/16/1004%E5%A6%82%E6%AD%8C%E7%9A%84%E8%A1%8C%E6%9D%BF/' itemprop="url">
+          <a class='readmore' href='/2024/01/02/3015Cartographer%E5%AE%89%E8%A3%85/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3233,7 +3276,7 @@ import numpy a...
       <div class="prev-next">
         
         <p class="current">
-          1 / 2
+          1 / 4
         </p>
         
           <a class="next" rel="next" href="/page/2/">
@@ -3267,6 +3310,8 @@ import numpy a...
     
       <div class='text'>
         
+          <h2>Moltke</h2>
+        
         
         
           <p><span id="jinrishici-sentence">Cheshire Cat</span></p>
@@ -3287,7 +3332,7 @@ import numpy a...
           
         
           
-            <a href="mailto:me@xxx.com"
+            <a href="mailto:yufanmao@hotmail.com"
               class="social fa-solid fa-envelope flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -3341,17 +3386,37 @@ import numpy a...
           <li><a class="flat-box"
             title="/categories/Code/" href="/categories/Code/"
             active-action="action-categoriesCode"
-            ><div class='name'>Code</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>Code</div><div class='badge'>(6)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/Code/C/" href="/categories/Code/C/"
+            active-action="action-categoriesCodeC"
+            ><div class='name'>C#</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/Code/Python/" href="/categories/Code/Python/"
             active-action="action-categoriesCodePython"
-            ><div class='name'>Python</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Hexo/" href="/categories/Hexo/"
+            active-action="action-categoriesHexo"
+            ><div class='name'>Hexo</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E5%93%B2%E5%AD%A6/" href="/categories/%E5%93%B2%E5%AD%A6/"
             active-action="action-categoriesE593B2E5ADA6"
-            ><div class='name'>哲学</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>哲学</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/" href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/"
+            active-action="action-categoriesE593B2E5ADA6E78E84E5ADA6"
+            ><div class='name'>玄学</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/" href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/"
+            active-action="action-categoriesE593B2E5ADA6E78E84E5ADA6E591A8E69893"
+            ><div class='name'>周易</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/" href="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/"
@@ -3372,6 +3437,36 @@ import numpy a...
             title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
             active-action="action-categoriesE695B0E68DAEE5BA93"
             ><div class='name'>数据库</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%97%85%E6%B8%B8/" href="/categories/%E6%97%85%E6%B8%B8/"
+            active-action="action-categoriesE69785E6B8B8"
+            ><div class='name'>旅游</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"
+            active-action="action-categoriesE69CBAE599A8E4BABA"
+            ><div class='name'>机器人</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/"
+            active-action="action-categoriesE69CBAE599A8E4BABAROS"
+            ><div class='name'>ROS</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" href="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/"
+            active-action="action-categoriesE794B5E58A9BE7B3BBE7BB9FE58886E69E90"
+            ><div class='name'>电力系统分析</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%94%B5%E5%BD%B1/" href="/categories/%E7%94%B5%E5%BD%B1/"
+            active-action="action-categoriesE794B5E5BDB1"
+            ><div class='name'>电影</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%BC%BA%E6%B0%A7/" href="/categories/%E7%BC%BA%E6%B0%A7/"
+            active-action="action-categoriesE7BCBAE6B0A7"
+            ><div class='name'>缺氧</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/"
@@ -3395,6 +3490,21 @@ import numpy a...
     
     
       
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Cartographer/" style="font-size: 17.33px; color: #828282">Cartographer</a> <a href="/tags/Gazebo/" style="font-size: 14px; color: #999">Gazebo</a> <a href="/tags/Oxygen-Not-Include/" style="font-size: 24px; color: #555">Oxygen Not Include</a> <a href="/tags/ROS/" style="font-size: 20.67px; color: #6c6c6c">ROS</a> <a href="/tags/%E5%91%A8%E6%98%93/" style="font-size: 14px; color: #999">周易</a> <a href="/tags/%E7%8E%A9/" style="font-size: 14px; color: #999">玩</a> <a href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">电力系统分析</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 14px; color: #999">电影</a>
+    </div>
+  </section>
+
 
     
   
@@ -3419,7 +3529,7 @@ import numpy a...
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>15 篇</div>
+          <div>32 篇</div>
         </div>
       
 
@@ -3440,7 +3550,7 @@ import numpy a...
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2023-12-25 日</div>
+          <div id="last-update-show">2024-01-25 日</div>
         </div>
       
     </div>
@@ -3824,6 +3934,59 @@ import numpy a...
 
 
 
+
+
+  <script>
+  let imgs = ["https://pic.imgdb.cn/item/65895489c458853aeffa7b84.jpg"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+      ParallaxWindow = document.querySelector("html");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 1500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '10000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/plugins/parallax.js').then(()=>{
+      parallax()
+    })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax);
+  }
+</script>
 
 
 
