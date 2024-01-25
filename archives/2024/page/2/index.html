@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.maoyufan.world/categories/鱼/"/>
+  <link rel="canonical" href="http://www.maoyufan.world/archives/2024/page/2/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,13 +33,13 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>分类：鱼 - Cheshire Cat</title>
+  <title>归档：2024 - Cheshire Cat</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="日常 - Mao Yufan - Cheshire Cat">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cheshire Cat">
-<meta property="og:url" content="http://www.maoyufan.world/categories/%E9%B1%BC/index.html">
+<meta property="og:url" content="http://www.maoyufan.world/archives/2024/page/2/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
 <meta property="og:description" content="日常">
 <meta property="og:locale" content="zh_CN">
@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1706173446347),
+    lastupdate: new Date(1706174280543),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2138,7 +2138,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2407,7 +2407,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  dock' style="display: none;">
+      <div id="half" class='cover-wrapper  dock' style="display: ;">
         
   <div id="parallax-window"></div>
 
@@ -2483,25 +2483,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
+	
+		
   <section class="post-list">
-    
-      
-        
-          
-        
-      
     
     
       
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2022/06/25/1007鱼鳃/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/02/3015Cartographer安装/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2519,17 +2511,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/25/1007%E9%B1%BC%E9%B3%83/"  itemprop="url">
-        鱼鳃的呼吸方式
+      <a href="/2024/01/02/3015Cartographer%E5%AE%89%E8%A3%85/"  itemprop="url">
+        Cartographer安装
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        水蛭，蚯蚓没有鳃也没有肺而通过皮肤呼吸。作为气体交换膜的皮肤需要足够湿润且足够薄。皮肤较薄对于生存来说代价高昂。此外气体交换效率与皮肤面积正相关而动物耗能与体重正相关，再者高级器官（如大脑）会显著增加氧气需求。
-鱼鳃上有许多鳃丝，鳃丝内有密布的毛细血管。柔软的鳃丝被坚硬的鳃盖保护，且满足了薄、湿润、表面积巨大的特点。鱼通过吞咽水，使水流充分流过鳃丝。  
-上岸后鳃丝不能保持湿润，降低了气体交...
+        官网教程
+1.安装依赖sudo apt-get update
+sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
+
+2.建立工作空间并下载源码mkdir cartographer_ws
+cd cartographer_ws
+mkdir src
+cd src
+git clone https://githu...
       
     
   </div>
@@ -2537,20 +2535,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-06-25T00:00:00+08:00">2022-06-25</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-01-02T18:00:00+08:00">2024-01-02</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%B1%BC/">鱼</a>
+          <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a><span class="sep"></span><a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/">ROS</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%B1%BC/" itemprop="url"><span itemprop="name">鱼</span></a>
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="url"><span itemprop="name">机器人</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/ROS/" itemprop="url"><span itemprop="name">ROS</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/06/25/1007%E9%B1%BC%E9%B3%83/' itemprop="url">
+          <a class='readmore' href='/2024/01/02/3015Cartographer%E5%AE%89%E8%A3%85/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2567,11 +2569,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </section>
   
     
-  
-
-
+      <br>
+      <div class="prev-next">
+        
+          <a class="prev" rel="prev" href="/archives/2024/">
+            <section class="post prev white-box shadow floatable blur" >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+            </section>
+          </a>
+        
+        <p class="current">
+          2 / 2
+        </p>
+        
+      </div>
     
   
+
+
+	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2696,14 +2712,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             ><div class='name'>玄学</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
-            title="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/" href="/categories/%E5%93%B2%E5%AD%A6/%E7%8E%84%E5%AD%A6/%E5%91%A8%E6%98%93/"
-            active-action="action-categoriesE593B2E5ADA6E78E84E5ADA6E591A8E69893"
-            ><div class='name'>周易</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
             title="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/" href="/categories/%E5%93%B2%E5%AD%A6/%E9%80%BB%E8%BE%91%E5%AD%A6/"
             active-action="action-categoriesE593B2E5ADA6E980BBE8BE91E5ADA6"
             ><div class='name'>逻辑学</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%91%98/" href="/categories/%E6%91%98/"
+            active-action="action-categoriesE69198"
+            ><div class='name'>摘</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%91%98/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" href="/categories/%E6%91%98/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/"
+            active-action="action-categoriesE69198E8AF97E8AF8DE5928CE69687E7ABA0"
+            ><div class='name'>诗词和文章</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
@@ -2736,6 +2757,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             ><div class='name'>ROS</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/%E6%9D%82%E8%B0%88/" href="/categories/%E6%9D%82%E8%B0%88/"
+            active-action="action-categoriesE69D82E8B088"
+            ><div class='name'>杂谈</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%9D%82%E8%B0%88/%E9%B1%BC/" href="/categories/%E6%9D%82%E8%B0%88/%E9%B1%BC/"
+            active-action="action-categoriesE69D82E8B088E9B1BC"
+            ><div class='name'>鱼</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" href="/categories/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/"
             active-action="action-categoriesE794B5E58A9BE7B3BBE7BB9FE58886E69E90"
             ><div class='name'>电力系统分析</div><div class='badge'>(1)</div></a></li>
@@ -2749,16 +2780,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             title="/categories/%E7%BC%BA%E6%B0%A7/" href="/categories/%E7%BC%BA%E6%B0%A7/"
             active-action="action-categoriesE7BCBAE6B0A7"
             ><div class='name'>缺氧</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" href="/categories/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/"
-            active-action="action-categoriesE8AF97E8AF8DE5928CE69687E7ABA0"
-            ><div class='name'>诗词和文章</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%B1%BC/" href="/categories/%E9%B1%BC/"
-            active-action="action-categoriesE9B1BC"
-            ><div class='name'>鱼</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2887,14 +2908,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.add("show");
+    l_header.classList.remove("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
+      cover_wrapper.id="half";
+      cover_wrapper.style.display="";
       scroll_down.style.display="none";
     
   
@@ -3445,7 +3466,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/鱼/","name":"鱼"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.maoyufan.world/archives/2024/","name":"2024年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
