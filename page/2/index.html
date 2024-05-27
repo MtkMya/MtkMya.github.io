@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712986276457),
+    lastupdate: new Date(1716793273114),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2492,7 +2492,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/17/3038i.MX6ULL初识/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/14/3078报错multiple_definition@C++/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2510,15 +2510,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/"  itemprop="url">
-        2024年2月17日
+      <a href="/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C++/"  itemprop="url">
+        C/C++报错multiple
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        序毕业设计选题：IMX6ULL平台直流电机的控制与应用一开始挑的题目是“LLC谐振变换器的仿真研究与设计”结果那位老师的题目没报上去。不是很喜欢后来的题目，很有国际学院的浮夸风，更喜欢基础理论的研究。粗看这个题目，感觉用STM32乃至51单片机都能实现。直流电机有专门的驱动芯片，只需要控制器输出PWM信号。通过电机的编码器读取转速。内部则是一套PID算法，如此形成闭环控制。这样的题目，难道是...
+        原因重复定义错误。C语言规定：一个变量可以多次声明但是只能定义一次。多个.c或.cpp文件同时引用一个.h文件时，其被包含至多个目标文件（.o）中，链接时，.h文件中定义的变量/函数会出现重复定义的错误。
+解决方法
+C语言中可以在.h文件中添加条件编译解决（#ifndef…）。在C++中无效，引文C++中#indef的作用域仅限一个文件
+C++中可在变量/函数前添加static
+在c/cpp...
       
     
   </div>
@@ -2526,7 +2530,296 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-17T00:00:00+08:00">2024-02-17</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-05-14T00:00:00+08:00">2024-05-14</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/DasArchiv/">DasArchiv</a><span class="sep"></span><a class="category-link" href="/categories/DasArchiv/C/">C</a><span class="sep"></span><a class="category-link" href="/categories/DasArchiv/C/">C++</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/DasArchiv/" itemprop="url"><span itemprop="name">DasArchiv</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/DasArchiv/C/" itemprop="url"><span itemprop="name">C</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/DasArchiv/C/" itemprop="url"><span itemprop="name">C++</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C++/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/14/3080函数printf@C/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Cheshire Cat">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Cheshire Cat">
+    <meta itemprop="description" content="日常">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/05/14/3080%E5%87%BD%E6%95%B0printf@C/"  itemprop="url">
+        C函数printf
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        打印十六进制直接打印printf(&#39;%x\n&#39;, i);两个一组打印printf(&#39;%2x\n&#39;, i);两个一组打印，不足两个前面补0printf(&#39;%02x\n&#39;, i);
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-14T00:00:00+08:00">2024-05-14</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/DasArchiv/">DasArchiv</a><span class="sep"></span><a class="category-link" href="/categories/DasArchiv/C/">C</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/DasArchiv/" itemprop="url"><span itemprop="name">DasArchiv</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/DasArchiv/C/" itemprop="url"><span itemprop="name">C</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/05/14/3080%E5%87%BD%E6%95%B0printf@C/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/04/13/3071地质年代/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Cheshire Cat">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Cheshire Cat">
+    <meta itemprop="description" content="日常">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/13/3071%E5%9C%B0%E8%B4%A8%E5%B9%B4%E4%BB%A3/"  itemprop="url">
+        地质年代
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        地质年代层级层级由高到低：
+
+宙（eon）
+代（era）
+纪（period）
+期（age）
+时（chron）（不常用）
+
+地质年代数字越小越古老
+4 显生宙4.3 新生代4.3.3 第四纪4.3.2 新近纪4.3.1 古近纪4.2 中生代4.2.3 白垩纪4.2.2 侏罗纪4.2.1 三叠纪4.1 古生代4.1.6 二叠纪4.1.5 石炭纪4.1.4 泥盆纪4.1.3 志留纪4.1.2 奥陶...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-13T00:00:00+08:00">2024-04-13</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/13/3071%E5%9C%B0%E8%B4%A8%E5%B9%B4%E4%BB%A3/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/04/13/3072标准电阻阻值/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Cheshire Cat">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Cheshire Cat">
+    <meta itemprop="description" content="日常">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/13/3072%E6%A0%87%E5%87%86%E7%94%B5%E9%98%BB%E9%98%BB%E5%80%BC/"  itemprop="url">
+        标准电阻阻值
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        序电阻阻值设计原则是在每种电阻制造误差一定时，使用每种阻值电阻的误差带（R_n ± err ）覆盖整个十倍程。得到的值只需乘以不同倍率（10^n）即可覆盖各种阻值。如此设计阻值，可使得电阻覆盖各种阻值且电阻型号最少。此方案可行的基础在于默认选择某个阻值的用户可以接受该误差范围内任意阻值。
+推导假设电阻误差为err，则其在误差范围内最大值紧邻更大型号电阻在误差范围内最小值：
+$R_{k-1}(...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-13T00:00:00+08:00">2024-04-13</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Archive/">Archive</a><span class="sep"></span><a class="category-link" href="/categories/Archive/%E6%A0%87%E5%87%86/">标准</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Archive/" itemprop="url"><span itemprop="name">Archive</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Archive/%E6%A0%87%E5%87%86/" itemprop="url"><span itemprop="name">标准</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/13/3072%E6%A0%87%E5%87%86%E7%94%B5%E9%98%BB%E9%98%BB%E5%80%BC/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/03/02/3053i.MX6ULL字符驱动/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Cheshire Cat">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Cheshire Cat">
+    <meta itemprop="description" content="日常">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/02/3053i.MX6ULL%E5%AD%97%E7%AC%A6%E9%A9%B1%E5%8A%A8/"  itemprop="url">
+        i.MX6ULL字符驱动
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        字符驱动将字符设备抽象为文件，应用程序可以像读写文件一样操作字符设备。字符驱动在文件系统中创建设备文件夹来表示字符设备。
+
+字符设备：以字符为单位进行输入和输出的设备
+设备号：用于标识字符设备
+设备结点：/dev目录下的特殊文件，与设备文件一一对应。
+
+
+文件操作函数：通过file_operations结构体定义的一组函数指针，用于处理对设备文件的操作
+
+字符设备结构体cdev：用于表示和管...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-02T00:00:00+08:00">2024-03-02</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
@@ -2543,7 +2836,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/' itemprop="url">
+          <a class='readmore' href='/2024/03/02/3053i.MX6ULL%E5%AD%97%E7%AC%A6%E9%A9%B1%E5%8A%A8/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2559,7 +2852,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/13/3037嵌入式Linux书目/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/03/01/3051i.MX6ULL驱动/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2577,18 +2870,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/13/3037%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E4%B9%A6%E7%9B%AE/"  itemprop="url">
-        嵌入式Linux书目
+      <a href="/2024/03/01/3051i.MX6ULL%E9%A9%B1%E5%8A%A8/"  itemprop="url">
+        i.MX6ULL驱动
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        书嵌入式Linux开发：《嵌入式Linux应用开发完全手册》韦东山
-Linux入门：《鸟哥的Linux私房菜 - 基础学习篇（第四版）》鸟哥
-Shell脚本：《Linux Shell脚本攻略 (第3版)》[美] Clif Flynt / [印] Shantanu Tushar / [印] Sarath Lakshman 译: 门佳
-C语言：《C陷阱与缺陷》作者: 凯尼格 译者: 高巍《C专家...
+        驱动概述驱动种类：
+
+字符设备驱动（Character Device Drivers）
+块设备驱动（Block Device Drivers）
+网络设备驱动（Network Device Drivers）
+
+驱动设计原则：
+只提供功能，不提供方法
+HelloWorld驱动123456789101112131415161718192021#include &lt;linux/module.h&...
       
     
   </div>
@@ -2596,24 +2894,24 @@ C语言：《C陷阱与缺陷》作者: 凯尼格 译者: 高巍《C专家...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-13T00:00:00+08:00">2024-02-13</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-03-01T00:00:00+08:00">2024-03-01</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Archive/">Archive</a><span class="sep"></span><a class="category-link" href="/categories/Archive/%E4%B9%A6%E7%9B%AE/">书目</a>
+          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Archive/" itemprop="url"><span itemprop="name">Archive</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Archive/%E4%B9%A6%E7%9B%AE/" itemprop="url"><span itemprop="name">书目</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/13/3037%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E4%B9%A6%E7%9B%AE/' itemprop="url">
+          <a class='readmore' href='/2024/03/01/3051i.MX6ULL%E9%A9%B1%E5%8A%A8/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2629,7 +2927,7 @@ C语言：《C陷阱与缺陷》作者: 凯尼格 译者: 高巍《C专家...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/12/3034铝型材入门/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/29/3049i.MX6ULL的GPIO及其外设适配/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2647,21 +2945,24 @@ C语言：《C陷阱与缺陷》作者: 凯尼格 译者: 高巍《C专家...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/12/3034%E9%93%9D%E5%9E%8B%E6%9D%90%E5%85%A5%E9%97%A8/"  itemprop="url">
-        铝型材入门
+      <a href="/2024/02/29/3049i.MX6ULL%E7%9A%84GPIO%E5%8F%8A%E5%85%B6%E5%A4%96%E8%AE%BE%E9%80%82%E9%85%8D/"  itemprop="url">
+        i.MX6ULL的GPIO及其外设适配
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        基本材料：6063铝合金挤压成型欧标和国标：槽型，国标槽型更方正，形似电话线接口，欧标槽更浅，似碗。相关螺栓螺母也分欧标和国标
-命名一般命名方法：截面尺寸，如20系列2020截面为20mm*20mm后缀：R：弧形版本N：封槽版本V：V形槽（适合滑车）高系列铝型材还可选择厚度
-攻丝尺寸20V：M520：M630、40：M8
-紧固件
-T形螺栓，配合紧固法兰螺母
-T形螺母，需要旋转到位
-滑块螺母，...
+        1.引脚控制最古老也是最普世的引脚控制方法:操作引脚寄存器
+1.1 pinctrl子系统
+配置引脚功能用于UART、SPI、I2C、GPIO等
+提供接口配置中断
+使用设备树定义
+
+举例&amp;iomux下有子节点
+pinctrl_keys: keysgrp &#123;
+    fsl,pins = &lt;
+        MX6ULL_PAD_SNVS_TAMPER4__GPIO5_I...
       
     
   </div>
@@ -2669,24 +2970,24 @@ T形螺母，需要旋转到位
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-12T00:00:00+08:00">2024-02-12</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-02-29T00:00:00+08:00">2024-02-29</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="sep"></span><a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/%E9%93%9D%E5%9E%8B%E6%9D%90/">铝型材</a>
+          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/%E9%93%9D%E5%9E%8B%E6%9D%90/" itemprop="url"><span itemprop="name">铝型材</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/12/3034%E9%93%9D%E5%9E%8B%E6%9D%90%E5%85%A5%E9%97%A8/' itemprop="url">
+          <a class='readmore' href='/2024/02/29/3049i.MX6ULL%E7%9A%84GPIO%E5%8F%8A%E5%85%B6%E5%A4%96%E8%AE%BE%E9%80%82%E9%85%8D/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2702,7 +3003,7 @@ T形螺母，需要旋转到位
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/12/3035铝型材工具/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/28/3047嵌入式Linux设备树/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2720,16 +3021,30 @@ T形螺母，需要旋转到位
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/12/3035%E9%93%9D%E5%9E%8B%E6%9D%90%E5%B7%A5%E5%85%B7/"  itemprop="url">
-        铝型材工具
+      <a href="/2024/02/28/3047%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E8%AE%BE%E5%A4%87%E6%A0%91/"  itemprop="url">
+        嵌入式Linux设备树
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        一些基本的准备带棘轮的套筒攻丝锥（4040 M8 2020 M6）手电钻螺丝刀批头套装
+        设备树用于给内核中的驱动指定硬件信息。
+和设备树有关的文件各式：
 
+设备树文件：.dts
+二进制的设备树文件：.dtb
+设备树模板：.dtbi
+
+设备树语法首行    /文件版本/;
+根节点
+/
+
+结点格式
+[label: ]node_name[@unit_adress]&#123;
+    [properties definitions]
+    [child nodes]
+&#125;;...
       
     
   </div>
@@ -2737,24 +3052,24 @@ T形螺母，需要旋转到位
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-12T00:00:00+08:00">2024-02-12</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-02-28T00:00:00+08:00">2024-02-28</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="sep"></span><a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/%E9%93%9D%E5%9E%8B%E6%9D%90/">铝型材</a>
+          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/%E9%93%9D%E5%9E%8B%E6%9D%90/" itemprop="url"><span itemprop="name">铝型材</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/12/3035%E9%93%9D%E5%9E%8B%E6%9D%90%E5%B7%A5%E5%85%B7/' itemprop="url">
+          <a class='readmore' href='/2024/02/28/3047%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E8%AE%BE%E5%A4%87%E6%A0%91/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2770,7 +3085,7 @@ T形螺母，需要旋转到位
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/12/3036木料/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/28/3048git@Ubuntu/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2788,62 +3103,20 @@ T形螺母，需要旋转到位
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/12/3036%E6%9C%A8%E6%96%99/"  itemprop="url">
-        木料
+      <a href="/2024/02/28/3048git@Ubuntu/"  itemprop="url">
+        git@Ubuntu
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        名词原木→实木版→木工板、生态板→颗粒板、刨花板、中纤板、欧松板  
-常用木（价格升序）松木板辐射松橡胶木榉木—以下硬木—白蜡木红橡木白橡木樱桃木黑胡桃木
-参考木价单位：元/立方米
-国产
+        git的操作流创建工程-&gt;写代码-&gt;上传代码到仓库-&gt;修改代码-&gt;上传代码测试新想法-&gt;创建分支出现问题-&gt;回滚
+初始化新仓库并创建账户git init
+git config --global user.name &quot;elf&quot;
+git config --global user.name &quot;elf@elf.com&quot;
 
-
-名称
-价格
-
-
-
-马尾松
-960
-
-
-杉木
-1220
-
-
-桦木
-2200
-
-
-樟子松
-2800
-
-
-柞木
-3040
-
-
-椴木
-4040
-
-
-白桦
-3400
-
-
-榆木
-5542
-
-
-水曲柳
-5850
-
-
-...
+执...
       
     
   </div>
@@ -2851,20 +3124,24 @@ T形螺母，需要旋转到位
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-12T00:00:00+08:00">2024-02-12</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-02-28T00:00:00+08:00">2024-02-28</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/12/3036%E6%9C%A8%E6%96%99/' itemprop="url">
+          <a class='readmore' href='/2024/02/28/3048git@Ubuntu/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2880,7 +3157,7 @@ T形螺母，需要旋转到位
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/11/3033数据恢复软件/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/24/3044世/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2898,279 +3175,19 @@ T形螺母，需要旋转到位
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/11/3033%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E8%BD%AF%E4%BB%B6/"  itemprop="url">
-        数据恢复软件
+      <a href="/2024/02/24/3044%E4%B8%96/"  itemprop="url">
+        世界尽头->冷酷仙境
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
-    
-      
-        要恢复相机里的照片，遂查资料得知了一些数据恢复软件。使用了Recuva，Wise Data Recovery，WinFR界面版，各个软件对64g内存卡的扫描+恢复操作大致为2小时。最后使用WinRF成功恢复绝大多数照片，其中有些照片像素变差，恢复的视频全都无法播放。
-
-WinFR界面版WinFR是Windows自带的数据恢复软件，但是原版只有命令行版本，有公司在此基础上开发了图形界面。免费软...
-      
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-02-11T00:00:00+08:00">2024-02-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Archive/">Archive</a><span class="sep"></span><a class="category-link" href="/categories/Archive/%E5%B7%A5%E5%85%B7/">工具</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Archive/" itemprop="url"><span itemprop="name">Archive</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Archive/%E5%B7%A5%E5%85%B7/" itemprop="url"><span itemprop="name">工具</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/11/3033%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E8%BD%AF%E4%BB%B6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/04/3030新摄影笔记1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Cheshire Cat">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Cheshire Cat">
-    <meta itemprop="description" content="日常">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/04/3030%E6%96%B0%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B01/"  itemprop="url">
-        新摄影笔记1
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        目录取景曝光虚实构图
-取景焦距和透视透视（空间感）：近大远小广角的透视效果会更明显，长焦更趋于真实比例
-焦距和透视和人像：
-
-那是因为在实际拍摄中使用广角镜头拍摄人像，透视感太强烈了，拍摄人像的时候会出现“大鼻子”的情况；而使用长焦镜头拍摄人像会让人面部看起来比较“平”（非不立体），会显得胖。
-
-
-拍摄距离越近，透视效果越明显；拍摄距离越远，透视效果就越不明显，直到可能看不出来。
-
-取景：景...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-04T00:00:00+08:00">2024-02-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%91%98/">摘</a><span class="sep"></span><a class="category-link" href="/categories/%E6%91%98/%E6%91%84%E5%BD%B1/">摄影</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%91%98/" itemprop="url"><span itemprop="name">摘</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%91%98/%E6%91%84%E5%BD%B1/" itemprop="url"><span itemprop="name">摄影</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/04/3030%E6%96%B0%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B01/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/29/3028电机种类概略/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Cheshire Cat">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Cheshire Cat">
-    <meta itemprop="description" content="日常">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/29/3028%E7%94%B5%E6%9C%BA%E7%A7%8D%E7%B1%BB%E6%A6%82%E7%95%A5/"  itemprop="url">
-        电机种类概略
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        基本电机异步电机感应电机，内部为鼠笼结构。通入三相交流电的磁场合成为旋转磁场，等效为转子切割磁场。此时鼠笼内部感应出磁场，转子随定子磁场算转。如果转子转速和定子磁场转速相同，将不会有“切割”的动作，也就不再会感应出磁场，因此转子转速永远无法达到定子磁场转速。异步电机转子和定子扭力不平衡，因此噪音较大。
-同步电机定子为固定磁极，随转子磁场旋转，犹如两磁铁异极想吸。控制方法：坐标变换
-直流电机定...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-29T00:00:00+08:00">2024-01-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%94%B5%E6%9C%BA%E5%AD%A6/">电机学</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%94%B5%E6%9C%BA%E5%AD%A6/" itemprop="url"><span itemprop="name">电机学</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/29/3028%E7%94%B5%E6%9C%BA%E7%A7%8D%E7%B1%BB%E6%A6%82%E7%95%A5/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/26/3027家庭电路设计/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Cheshire Cat">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Cheshire Cat">
-    <meta itemprop="description" content="日常">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/26/3027%E5%AE%B6%E5%BA%AD%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"  itemprop="url">
-        家庭电路设计
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        导线参数
-
-
-截面积
-最大电流
-功率
-空开
-
-
-
-1方
-8A
-1.7kW
-C10
-
-
-1.5方
-15A
-3.3kW
-C16/C10
-
-
-2.5方
-25A
-5.5kW
-C20/C16
-
-
-4方
-32A
-7kW
-C32/C25/C20
-
-
-6方
-40A
-8.8kW
-C40
-
-
-10方
-65A
-14.3kW
-C63
-
-
-空气开关规格1P：切断火线1P+N（DPN）：检测火线，切断火线零线2P：可同...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-26T00:00:00+08:00">2024-01-26</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-02-24T00:00:00+08:00">2024-02-24</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
@@ -3183,73 +3200,7 @@ C63
       </div>
       
         <div>
-          <a class='readmore' href='/2024/01/26/3027%E5%AE%B6%E5%BA%AD%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/01/24/3026缺氧石油理论/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Cheshire Cat">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Cheshire Cat">
-    <meta itemprop="description" content="日常">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/24/3026%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E7%90%86%E8%AE%BA/"  itemprop="url">
-        缺氧石油理论
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-裂化(cracking)：是指一种使烃类分子分裂为几个较小分子的反应过程。裂化以生产汽油、煤油和柴油等轻质油品为目的。裂解(pyrolysis)：是指通过热能将一种样品(主要指高分子化合物)转变成另外几种物质(主要指低分子化合物)的过程。裂解旨在生产乙烯、丙烯、丁烯、丁二烯等基本化工原料
-
-缺氧中的裂化指原油在高温下转化为石油的过程，而裂解指石油在高温下转化为高硫甲烷的过程。物质变化有如下...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-24T00:00:00+08:00">2024-01-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BC%BA%E6%B0%A7/">缺氧</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%BC%BA%E6%B0%A7/" itemprop="url"><span itemprop="name">缺氧</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/24/3026%E7%BC%BA%E6%B0%A7%E7%9F%B3%E6%B2%B9%E7%90%86%E8%AE%BA/' itemprop="url">
+          <a class='readmore' href='/2024/02/24/3044%E4%B8%96/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3276,7 +3227,7 @@ C63
           </a>
         
         <p class="current">
-          2 / 6
+          2 / 7
         </p>
         
           <a class="next" rel="next" href="/page/3/">
@@ -3386,7 +3337,7 @@ C63
           <li><a class="flat-box"
             title="/categories/Archive/" href="/categories/Archive/"
             active-action="action-categoriesArchive"
-            ><div class='name'>Archive</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>Archive</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/Archive/%E4%B9%A6%E7%9B%AE/" href="/categories/Archive/%E4%B9%A6%E7%9B%AE/"
@@ -3397,6 +3348,11 @@ C63
             title="/categories/Archive/%E5%B7%A5%E5%85%B7/" href="/categories/Archive/%E5%B7%A5%E5%85%B7/"
             active-action="action-categoriesArchiveE5B7A5E585B7"
             ><div class='name'>工具</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/Archive/%E6%A0%87%E5%87%86/" href="/categories/Archive/%E6%A0%87%E5%87%86/"
+            active-action="action-categoriesArchiveE6A087E58786"
+            ><div class='name'>标准</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Code/" href="/categories/Code/"
@@ -3412,6 +3368,41 @@ C63
             title="/categories/Code/Python/" href="/categories/Code/Python/"
             active-action="action-categoriesCodePython"
             ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/DasArchiv/" href="/categories/DasArchiv/"
+            active-action="action-categoriesDasArchiv"
+            ><div class='name'>DasArchiv</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/C/" href="/categories/DasArchiv/C/"
+            active-action="action-categoriesDasArchivC"
+            ><div class='name'>C</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/C/" href="/categories/DasArchiv/C/"
+            active-action="action-categoriesDasArchivC"
+            ><div class='name'>C++</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/Qt/" href="/categories/DasArchiv/Qt/"
+            active-action="action-categoriesDasArchivQt"
+            ><div class='name'>Qt</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/" href="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/"
+            active-action="action-categoriesDasArchivE4B893E794A8E88AAFE78987"
+            ><div class='name'>专用芯片</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/" href="/categories/DasArchiv/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/"
+            active-action="action-categoriesDasArchivE6A8A1E68B9FE794B5E8B7AF"
+            ><div class='name'>模拟电路</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/DasArchiv/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" href="/categories/DasArchiv/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/"
+            active-action="action-categoriesDasArchivE9809AE4BFA1E58D8FE8AEAE"
+            ><div class='name'>通信协议</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Hexo/" href="/categories/Hexo/"
@@ -3446,7 +3437,7 @@ C63
           <li><a class="flat-box"
             title="/categories/%E6%91%98/" href="/categories/%E6%91%98/"
             active-action="action-categoriesE69198"
-            ><div class='name'>摘</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>摘</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E6%91%98/%E6%91%84%E5%BD%B1/" href="/categories/%E6%91%98/%E6%91%84%E5%BD%B1/"
@@ -3456,7 +3447,7 @@ C63
           <li><a class="flat-box child"
             title="/categories/%E6%91%98/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/" href="/categories/%E6%91%98/%E8%AF%97%E8%AF%8D%E5%92%8C%E6%96%87%E7%AB%A0/"
             active-action="action-categoriesE69198E8AF97E8AF8DE5928CE69687E7ABA0"
-            ><div class='name'>诗词和文章</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>诗词和文章</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
@@ -3523,6 +3514,11 @@ C63
             active-action="action-categoriesE7BCBAE6B0A7"
             ><div class='name'>缺氧</div><div class='badge'>(6)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/%E8%AE%BE%E8%AE%A1/" href="/categories/%E8%AE%BE%E8%AE%A1/"
+            active-action="action-categoriesE8AEBEE8AEA1"
+            ><div class='name'>设计</div><div class='badge'>(1)</div></a></li>
+        
       </ul>
     </div>
   </section>
@@ -3546,7 +3542,7 @@ C63
 
 
     <div class='content'>
-      <a href="/tags/Arm/" style="font-size: 22px; color: #636363">Arm</a> <a href="/tags/Cartographer/" style="font-size: 16px; color: #8b8b8b">Cartographer</a> <a href="/tags/Gazebo/" style="font-size: 14px; color: #999">Gazebo</a> <a href="/tags/OxygenNotInclude/" style="font-size: 20px; color: #707070">OxygenNotInclude</a> <a href="/tags/ROS/" style="font-size: 18px; color: #7e7e7e">ROS</a> <a href="/tags/i-MX6ULL/" style="font-size: 22px; color: #636363">i.MX6ULL</a> <a href="/tags/%E4%B9%A6/" style="font-size: 14px; color: #999">书</a> <a href="/tags/%E5%91%A8%E6%98%93/" style="font-size: 14px; color: #999">周易</a> <a href="/tags/%E5%9C%B0%E7%90%86/" style="font-size: 14px; color: #999">地理</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux/" style="font-size: 24px; color: #555">嵌入式linux</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 14px; color: #999">数据恢复</a> <a href="/tags/%E6%9C%A8%E6%96%99/" style="font-size: 14px; color: #999">木料</a> <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" style="font-size: 24px; color: #555">毕业设计</a> <a href="/tags/%E7%8E%A9/" style="font-size: 14px; color: #999">玩</a> <a href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">电力系统分析</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 14px; color: #999">电影</a> <a href="/tags/%E7%94%B5%E6%9C%BA%E5%AD%A6/" style="font-size: 14px; color: #999">电机学</a> <a href="/tags/%E9%93%9D%E5%9E%8B%E6%9D%90/" style="font-size: 16px; color: #8b8b8b">铝型材</a>
+      <a href="/tags/Arm/" style="font-size: 22.33px; color: #606060">Arm</a> <a href="/tags/C/" style="font-size: 17.33px; color: #828282">C</a> <a href="/tags/C/" style="font-size: 15.67px; color: #8e8e8e">C++</a> <a href="/tags/Cartographer/" style="font-size: 15.67px; color: #8e8e8e">Cartographer</a> <a href="/tags/Gazebo/" style="font-size: 14px; color: #999">Gazebo</a> <a href="/tags/OxygenNotInclude/" style="font-size: 20.67px; color: #6c6c6c">OxygenNotInclude</a> <a href="/tags/QLabel/" style="font-size: 14px; color: #999">QLabel</a> <a href="/tags/QString/" style="font-size: 14px; color: #999">QString</a> <a href="/tags/Qt/" style="font-size: 14px; color: #999">Qt</a> <a href="/tags/ROS/" style="font-size: 19px; color: #777">ROS</a> <a href="/tags/i-MX6ULL/" style="font-size: 22.33px; color: #606060">i.MX6ULL</a> <a href="/tags/%E4%B9%A6/" style="font-size: 14px; color: #999">书</a> <a href="/tags/%E5%91%A8%E6%98%93/" style="font-size: 14px; color: #999">周易</a> <a href="/tags/%E5%9C%B0%E7%90%86/" style="font-size: 14px; color: #999">地理</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux/" style="font-size: 24px; color: #555">嵌入式linux</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" style="font-size: 14px; color: #999">数字电路</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 14px; color: #999">数据恢复</a> <a href="/tags/%E6%9C%A8%E6%96%99/" style="font-size: 14px; color: #999">木料</a> <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" style="font-size: 24px; color: #555">毕业设计</a> <a href="/tags/%E7%8E%A9/" style="font-size: 14px; color: #999">玩</a> <a href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">电力系统分析</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 14px; color: #999">电影</a> <a href="/tags/%E7%94%B5%E6%9C%BA%E5%AD%A6/" style="font-size: 14px; color: #999">电机学</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">设计</a> <a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/" style="font-size: 14px; color: #999">运算放大器</a> <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" style="font-size: 14px; color: #999">通信协议</a> <a href="/tags/%E9%93%9D%E5%9E%8B%E6%9D%90/" style="font-size: 15.67px; color: #8e8e8e">铝型材</a>
     </div>
   </section>
 
@@ -3574,7 +3570,7 @@ C63
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>52 篇</div>
+          <div>65 篇</div>
         </div>
       
 
@@ -3595,7 +3591,7 @@ C63
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-04-13 日</div>
+          <div id="last-update-show">2024-05-27 日</div>
         </div>
       
     </div>
