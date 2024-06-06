@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://www.maoyufan.world/2024/02/17/3038i.mx6ull初识/"/>
+  <link rel="canonical" href="http://www.maoyufan.world/2024/05/14/3078报错multiple_definition@c/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,24 +33,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Cheshire Cat</title>
-  <meta name="keywords" content="毕业设计,Arm,i.MX6ULL,嵌入式linux,null">
+  <title>C报错multiple_definition - Cheshire Cat</title>
+  <meta name="keywords" content="C,null">
   <meta desc name="description" content="日常 - Mao Yufan - Cheshire Cat">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cheshire Cat">
-<meta property="og:url" content="http://www.maoyufan.world/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/index.html">
+<meta property="og:title" content="C报错multiple_definition">
+<meta property="og:url" content="http://www.maoyufan.world/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
-<meta property="og:description" content="序毕业设计选题：IMX6ULL平台直流电机的控制与应用一开始挑的题目是“LLC谐振变换器的仿真研究与设计”结果那位老师的题目没报上去。不是很喜欢后来的题目，很有国际学院的浮夸风，更喜欢基础理论的研究。粗看这个题目，感觉用STM32乃至51单片机都能实现。直流电机有专门的驱动芯片，只需要控制器输出PWM信号。通过电机的编码器读取转速。内部则是一套PID算法，如此形成闭环控制。这样的题目，难道是要把着">
+<meta property="og:description" content="原因重复定义错误。C语言规定：一个变量可以多次声明但是只能定义一次。多个.c或.cpp文件同时引用一个.h文件时，其被包含至多个目标文件（.o）中，链接时，.h文件中定义的变量&#x2F;函数会出现重复定义的错误。 解决方法 C语言中可以在.h文件中添加条件编译解决（#ifndef…）。在C++中无效，引文C++中#indef的作用域仅限一个文件 C++中可在变量&#x2F;函数前添加static 在c&#x2F;cpp文件中">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-07T09:41:11.514Z">
+<meta property="article:published_time" content="2024-05-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-27T11:19:31.595Z">
 <meta property="article:author" content="Mao Yufan">
-<meta property="article:tag" content="毕业设计">
-<meta property="article:tag" content="Arm">
-<meta property="article:tag" content="i.MX6ULL">
-<meta property="article:tag" content="嵌入式linux">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1716,7 +1713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716793273114),
+    lastupdate: new Date(1717664153221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2491,7 +2488,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/17/3038i.MX6ULL初识/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/14/3078报错multiple_definition@C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2511,22 +2508,82 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        C报错multiple_definition
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://pic.imgdb.cn/item/65950cae871b83018a65b098.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/65950cae871b83018a65b098.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Moltke</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Code/">Code</a><span class="sep"></span><a class="category-link" href="/categories/Code/C/">C</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Code/" itemprop="url"><span itemprop="name">Code</span></a>
       </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Code/C/" itemprop="url"><span itemprop="name">C</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年5月14日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>毕业设计选题：<strong>IMX6ULL平台直流电机的控制与应用</strong><br>一开始挑的题目是“LLC谐振变换器的仿真研究与设计”结果那位老师的题目没报上去。不是很喜欢后来的题目，很有国际学院的浮夸风，更喜欢基础理论的研究。<br>粗看这个题目，感觉用STM32乃至51单片机都能实现。直流电机有专门的驱动芯片，只需要控制器输出PWM信号。通过电机的编码器读取转速。内部则是一套PID算法，如此形成闭环控制。<br>这样的题目，难道是要把着重点放在linux程序和Qt界面的编写上？还是说低性能芯片会有什么瓶颈？虽然本来也想学这两样，正好借此机会了解吧。</p>
-<p>学校发的开发板是从合作企业拿的。<a target="_blank" rel="noopener" href="https://www.elfboard.com/">https://www.elfboard.com/</a>飞凌嵌入式的网站，他们的入门文档真不赖。写的很详细，但偏向实用，很多没有解释原理。</p>
-<h2 id="学习流程"><a href="#学习流程" class="headerlink" title="学习流程"></a>学习流程</h2><p>应用开发-&gt;驱动开发-&gt;bootloader</p>
-<p>Shell编程<br>Makefile编写<br>设备树编辑</p>
-<p>XXX<br><strong>没什么思路</strong></p>
-<h2 id="进度安排"><a href="#进度安排" class="headerlink" title="进度安排"></a>进度安排</h2><p>另附提交的进度安排</p>
-<p>文献查阅、资料收集-2.18前<br>外文文献翻译-2.19<del>2.25（1周）<br>工作计划制定、开题报告撰写-2.26</del>3.10（2周）<br>软硬件设计及调试-3.11<del>4.7（4周）<br>中期检查-4月上旬<br>软硬件完善、论文撰写-4.8</del>4.28（3周）</p>
+    <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>重复定义错误。C语言规定：一个变量可以多次<strong>声明</strong>但是只能<strong>定义</strong>一次。多个.c或.cpp文件同时引用一个.h文件时，其被包含至多个目标文件（.o）中，链接时，.h文件中定义的变量/函数会出现重复定义的错误。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li>C语言中可以在.h文件中添加条件编译解决（#ifndef…）。在C++中无效，引文C++中#indef的作用域仅限一个文件</li>
+<li>C++中可在变量/函数前添加static</li>
+<li>在c/cpp文件中定义extern修饰的变量</li>
+<li>尽量避免在.h文件中定义变量、函数</li>
+<li>C++中可使用inline修饰函数</li>
+<li>C中可以定义宏函数（容易写错，因此C++中出现了inline）</li>
+</ul>
+<h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>使用static修饰的函数、变量，每个cpp文件都调用属于其本身的函数、变量，两者地址不同、也不互通。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lxzhong1/article/details/123023513">https://blog.csdn.net/lxzhong1/article/details/123023513</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/577994847">https://zhuanlan.zhihu.com/p/577994847</a></li>
+</ol>
 
   </div>
   
@@ -2551,10 +2608,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-07T17:41:11+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-27T19:19:31+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年3月7日</p>
+    <p>更新于：2024年5月27日</p>
   </a>
 </div>
 
@@ -2563,8 +2620,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>毕业设计</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Arm/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Arm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/i-MX6ULL/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>i.MX6ULL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>嵌入式linux</p></a></div>
-  <span hidden itemprop="keywords">毕业设计 Arm i.MX6ULL 嵌入式linux</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div>
+  <span hidden itemprop="keywords">C</span>
 
 
         
@@ -2582,18 +2639,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/19/3040%E6%89%8B%E8%A1%A8%E8%AF%B4%E6%98%8E%E4%B9%A6/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>手表说明书</p>
-          <p class='content'>针对卡西欧GWR-B1000。喜欢手表的全机械交互，但和有数显的其他表款相比是另一套交互逻辑。虽然能从官网上下载PDF格式的说明书，但偶尔查一次也很麻烦。
-写在前面从表盘右上角开始逆时针三个按键...</p>
+        <a class='prev' href='/2024/05/14/3080%E5%87%BD%E6%95%B0printf@C/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C函数printf</p>
+          <p class='content'>打印十六进制直接打印printf(&#39;%x\n&#39;, i);两个一组打印printf(&#39;%2x\n&#39;, i);两个一组打印，不足两个前面补0printf(&#39;%...</p>
         </a>
       
       
-        <a class='next' href='/2024/02/13/3037%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E4%B9%A6%E7%9B%AE/'>
-          <p class='title'>嵌入式Linux书目<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>书嵌入式Linux开发：《嵌入式Linux应用开发完全手册》韦东山
-Linux入门：《鸟哥的Linux私房菜 - 基础学习篇（第四版）》鸟哥
-Shell脚本：《Linux Shell脚本攻略 (...</p>
+        <a class='next' href='/2024/05/14/3079%E4%BF%AE%E9%A5%B0%E7%AC%A6static@C++/'>
+          <p class='title'>C/C++修饰符static<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+修饰全局变量/函数时，该变量/函数只能在本文件中调用，对其他文件不可见
+修饰局部变量时，只会初始化一次
+static修饰的变量默认初始化为0
+
+C++独有特性
+
+修饰类的数据成员时，该类的所有...</p>
         </a>
       
     </div>
@@ -2609,7 +2670,7 @@ Shell脚本：《Linux Shell脚本攻略 (...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2651,7 +2712,7 @@ Shell脚本：《Linux Shell脚本攻略 (...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F"><span class="toc-text">序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B"><span class="toc-text">学习流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%BA%A6%E5%AE%89%E6%8E%92"><span class="toc-text">进度安排</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A"><span class="toc-text">解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li></ol>
     </div>
   </section>
 
@@ -2707,7 +2768,7 @@ Shell脚本：《Linux Shell脚本攻略 (...</p>
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3274,7 +3335,7 @@ Shell脚本：《Linux Shell脚本攻略 (...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/嵌入式/","name":"嵌入式"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/嵌入式/i-MX6ULL/","name":"i.MX6ULL"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.maoyufan.world/2024/02/17/3038i.MX6ULL初识/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.maoyufan.world/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.maoyufan.world/2024/02/17/3038i.MX6ULL%E5%88%9D%E8%AF%86/","wordCount":0,"datePublished":"2024-02-16T16:00:00.000Z","dateModified":"2024-03-07T09:41:11.514Z","articleSection":"嵌入式","keywords":"毕业设计,Arm,i.MX6ULL,嵌入式linux","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/Code/","name":"Code"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/Code/C/","name":"C"}},{"@type":"ListItem","position":3,"item":{"@id":"http://www.maoyufan.world/2024/05/14/3078报错multiple_definition@C/","name":"C报错multiple_definition"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C报错multiple_definition","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.maoyufan.world/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://www.maoyufan.world/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/","wordCount":0,"datePublished":"2024-05-13T16:00:00.000Z","dateModified":"2024-05-27T11:19:31.595Z","articleSection":"Code","keywords":"C","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

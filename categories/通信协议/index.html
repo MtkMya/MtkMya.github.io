@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://www.maoyufan.world/categories/dasarchiv/专用芯片/"/>
+  <link rel="canonical" href="http://www.maoyufan.world/categories/通信协议/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,13 +33,13 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>分类：专用芯片 - Cheshire Cat</title>
+  <title>分类：通信协议 - Cheshire Cat</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="日常 - Mao Yufan - Cheshire Cat">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cheshire Cat">
-<meta property="og:url" content="http://www.maoyufan.world/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/index.html">
+<meta property="og:url" content="http://www.maoyufan.world/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/index.html">
 <meta property="og:site_name" content="Cheshire Cat">
 <meta property="og:description" content="日常">
 <meta property="og:locale" content="zh_CN">
@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716793273114),
+    lastupdate: new Date(1717664153221),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2501,7 +2501,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/26/3084定时器555/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/27/3074Modbus初步/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2519,45 +2519,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/05/26/3084%E5%AE%9A%E6%97%B6%E5%99%A8555/"  itemprop="url">
-        555定时器
+      <a href="/2024/05/27/3074Modbus%E5%88%9D%E6%AD%A5/"  itemprop="url">
+        Modbus初步
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        555定时器由内含三个5kΩ电阻得名。
-常用封装引脚：
-
-
-
-
-GND
-VCC
-
-
-
-
-触发引脚
-TRIG
-DIS
-放电引脚
-
-
-输出引脚
-OUT
-THR
-阈值引脚
-
-
-复位引脚
-RST
-CTRL
-控制引脚
-
-
-TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，输出高电平。DIS引脚连接三极管集电极，通过电阻R2和电容C与地相连，通过电阻R1与电源相连。输出高电平...
+        Modbus是一种总线协议，支持单主机和最多247个从机。主机和从机见通过请求/应答的模式交互。从机没有收到主机请求时，不会主动发送数据，从机间也不会进行通讯。
+Modbus的数据链路层有两种：基于标准串口协议或TCP协议。物理层可使用RS232、RS485、RS422或光纤、网线、无线等传输介质。基于串口通信时，RS485是很好的选择，Modbus的交互模式决定线路只需实现半双工通信，RS...
       
     
   </div>
@@ -2565,24 +2536,20 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-05-26T00:00:00+08:00">2024-05-26</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-05-27T00:00:00+08:00">2024-05-27</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/DasArchiv/">DasArchiv</a><span class="sep"></span><a class="category-link" href="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/">专用芯片</a>
+          <a class="category-link" href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">通信协议</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/DasArchiv/" itemprop="url"><span itemprop="name">DasArchiv</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/" itemprop="url"><span itemprop="name">专用芯片</span></a>
+              <a href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" itemprop="url"><span itemprop="name">通信协议</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/05/26/3084%E5%AE%9A%E6%97%B6%E5%99%A8555/' itemprop="url">
+          <a class='readmore' href='/2024/05/27/3074Modbus%E5%88%9D%E6%AD%A5/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2720,7 +2687,7 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
           <li><a class="flat-box"
             title="/categories/Code/" href="/categories/Code/"
             active-action="action-categoriesCode"
-            ><div class='name'>Code</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>Code</div><div class='badge'>(12)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/Code/C/" href="/categories/Code/C/"
@@ -2728,44 +2695,19 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
             ><div class='name'>C#</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
+            title="/categories/Code/C/" href="/categories/Code/C/"
+            active-action="action-categoriesCodeC"
+            ><div class='name'>C</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
             title="/categories/Code/Python/" href="/categories/Code/Python/"
             active-action="action-categoriesCodePython"
             ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/DasArchiv/" href="/categories/DasArchiv/"
-            active-action="action-categoriesDasArchiv"
-            ><div class='name'>DasArchiv</div><div class='badge'>(10)</div></a></li>
-        
           <li><a class="flat-box child"
-            title="/categories/DasArchiv/C/" href="/categories/DasArchiv/C/"
-            active-action="action-categoriesDasArchivC"
-            ><div class='name'>C</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DasArchiv/C/" href="/categories/DasArchiv/C/"
-            active-action="action-categoriesDasArchivC"
-            ><div class='name'>C++</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DasArchiv/Qt/" href="/categories/DasArchiv/Qt/"
-            active-action="action-categoriesDasArchivQt"
+            title="/categories/Code/Qt/" href="/categories/Code/Qt/"
+            active-action="action-categoriesCodeQt"
             ><div class='name'>Qt</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/" href="/categories/DasArchiv/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/"
-            active-action="action-categoriesDasArchivE4B893E794A8E88AAFE78987"
-            ><div class='name'>专用芯片</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DasArchiv/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/" href="/categories/DasArchiv/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/"
-            active-action="action-categoriesDasArchivE6A8A1E68B9FE794B5E8B7AF"
-            ><div class='name'>模拟电路</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/DasArchiv/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" href="/categories/DasArchiv/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/"
-            active-action="action-categoriesDasArchivE9809AE4BFA1E58D8FE8AEAE"
-            ><div class='name'>通信协议</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Hexo/" href="/categories/Hexo/"
@@ -2790,12 +2732,12 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
           <li><a class="flat-box"
             title="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"
             active-action="action-categoriesE5B58CE585A5E5BC8F"
-            ><div class='name'>嵌入式</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>嵌入式</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/"
             active-action="action-categoriesE5B58CE585A5E5BC8Fi-MX6ULL"
-            ><div class='name'>i.MX6ULL</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>i.MX6ULL</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%91%98/" href="/categories/%E6%91%98/"
@@ -2873,6 +2815,21 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
             ><div class='name'>电机学</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/%E7%94%B5%E8%B7%AF/" href="/categories/%E7%94%B5%E8%B7%AF/"
+            active-action="action-categoriesE794B5E8B7AF"
+            ><div class='name'>电路</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E7%94%B5%E8%B7%AF/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/" href="/categories/%E7%94%B5%E8%B7%AF/%E4%B8%93%E7%94%A8%E8%8A%AF%E7%89%87/"
+            active-action="action-categoriesE794B5E8B7AFE4B893E794A8E88AAFE78987"
+            ><div class='name'>专用芯片</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/" href="/categories/%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF/"
+            active-action="action-categoriesE794B5E8B7AFE6A8A1E68B9FE794B5E8B7AF"
+            ><div class='name'>模拟电路</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/%E7%BC%BA%E6%B0%A7/" href="/categories/%E7%BC%BA%E6%B0%A7/"
             active-action="action-categoriesE7BCBAE6B0A7"
             ><div class='name'>缺氧</div><div class='badge'>(6)</div></a></li>
@@ -2880,7 +2837,17 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
           <li><a class="flat-box"
             title="/categories/%E8%AE%BE%E8%AE%A1/" href="/categories/%E8%AE%BE%E8%AE%A1/"
             active-action="action-categoriesE8AEBEE8AEA1"
-            ><div class='name'>设计</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>设计</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E8%AE%BE%E8%AE%A1/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" href="/categories/%E8%AE%BE%E8%AE%A1/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"
+            active-action="action-categoriesE8AEBEE8AEA1E6AF95E4B89AE8AEBEE8AEA1"
+            ><div class='name'>毕业设计</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/"
+            active-action="action-categoriesE9809AE4BFA1E58D8FE8AEAE"
+            ><div class='name'>通信协议</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2905,7 +2872,7 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
 
 
     <div class='content'>
-      <a href="/tags/Arm/" style="font-size: 22.33px; color: #606060">Arm</a> <a href="/tags/C/" style="font-size: 17.33px; color: #828282">C</a> <a href="/tags/C/" style="font-size: 15.67px; color: #8e8e8e">C++</a> <a href="/tags/Cartographer/" style="font-size: 15.67px; color: #8e8e8e">Cartographer</a> <a href="/tags/Gazebo/" style="font-size: 14px; color: #999">Gazebo</a> <a href="/tags/OxygenNotInclude/" style="font-size: 20.67px; color: #6c6c6c">OxygenNotInclude</a> <a href="/tags/QLabel/" style="font-size: 14px; color: #999">QLabel</a> <a href="/tags/QString/" style="font-size: 14px; color: #999">QString</a> <a href="/tags/Qt/" style="font-size: 14px; color: #999">Qt</a> <a href="/tags/ROS/" style="font-size: 19px; color: #777">ROS</a> <a href="/tags/i-MX6ULL/" style="font-size: 22.33px; color: #606060">i.MX6ULL</a> <a href="/tags/%E4%B9%A6/" style="font-size: 14px; color: #999">书</a> <a href="/tags/%E5%91%A8%E6%98%93/" style="font-size: 14px; color: #999">周易</a> <a href="/tags/%E5%9C%B0%E7%90%86/" style="font-size: 14px; color: #999">地理</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux/" style="font-size: 24px; color: #555">嵌入式linux</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/" style="font-size: 14px; color: #999">数字电路</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 14px; color: #999">数据恢复</a> <a href="/tags/%E6%9C%A8%E6%96%99/" style="font-size: 14px; color: #999">木料</a> <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" style="font-size: 24px; color: #555">毕业设计</a> <a href="/tags/%E7%8E%A9/" style="font-size: 14px; color: #999">玩</a> <a href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">电力系统分析</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 14px; color: #999">电影</a> <a href="/tags/%E7%94%B5%E6%9C%BA%E5%AD%A6/" style="font-size: 14px; color: #999">电机学</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">设计</a> <a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/" style="font-size: 14px; color: #999">运算放大器</a> <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" style="font-size: 14px; color: #999">通信协议</a> <a href="/tags/%E9%93%9D%E5%9E%8B%E6%9D%90/" style="font-size: 15.67px; color: #8e8e8e">铝型材</a>
+      <a href="/tags/Arm/" style="font-size: 22.33px; color: #606060">Arm</a> <a href="/tags/C/" style="font-size: 17.33px; color: #828282">C</a> <a href="/tags/C/" style="font-size: 14px; color: #999">C++</a> <a href="/tags/Cartographer/" style="font-size: 15.67px; color: #8e8e8e">Cartographer</a> <a href="/tags/Gazebo/" style="font-size: 14px; color: #999">Gazebo</a> <a href="/tags/OxygenNotInclude/" style="font-size: 20.67px; color: #6c6c6c">OxygenNotInclude</a> <a href="/tags/QLabel/" style="font-size: 14px; color: #999">QLabel</a> <a href="/tags/QString/" style="font-size: 14px; color: #999">QString</a> <a href="/tags/Qt/" style="font-size: 17.33px; color: #828282">Qt</a> <a href="/tags/ROS/" style="font-size: 19px; color: #777">ROS</a> <a href="/tags/i-MX6ULL/" style="font-size: 22.33px; color: #606060">i.MX6ULL</a> <a href="/tags/%E4%B9%A6/" style="font-size: 14px; color: #999">书</a> <a href="/tags/%E5%91%A8%E6%98%93/" style="font-size: 14px; color: #999">周易</a> <a href="/tags/%E5%9C%B0%E7%90%86/" style="font-size: 14px; color: #999">地理</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux/" style="font-size: 24px; color: #555">嵌入式linux</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 14px; color: #999">数据恢复</a> <a href="/tags/%E6%9C%A8%E6%96%99/" style="font-size: 14px; color: #999">木料</a> <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" style="font-size: 24px; color: #555">毕业设计</a> <a href="/tags/%E7%8E%A9/" style="font-size: 14px; color: #999">玩</a> <a href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">电力系统分析</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 14px; color: #999">电影</a> <a href="/tags/%E7%94%B5%E6%9C%BA%E5%AD%A6/" style="font-size: 14px; color: #999">电机学</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">设计</a> <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" style="font-size: 14px; color: #999">通信协议</a> <a href="/tags/%E9%93%9D%E5%9E%8B%E6%9D%90/" style="font-size: 15.67px; color: #8e8e8e">铝型材</a>
     </div>
   </section>
 
@@ -2954,7 +2921,7 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-05-27 日</div>
+          <div id="last-update-show">2024-06-06 日</div>
         </div>
       
     </div>
@@ -3567,7 +3534,7 @@ TRIG端电压大于1/3VCC时，输出高电平。THR端电压大于2/3VCC时，�
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/专用芯片/","name":"专用芯片"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","sameAs":["https://github.com/volantis-x"],"description":"日常"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://www.maoyufan.world/","name":"Cheshire Cat"}},{"@type":"ListItem","position":2,"item":{"@id":"http://www.maoyufan.world/categories/通信协议/","name":"通信协议"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Cheshire Cat","url":"http://www.maoyufan.world/","keywords":null,"description":"日常","author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/","description":"日常"},"publisher":{"@type":"Organization","name":"Cheshire Cat","url":"http://www.maoyufan.world/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://www.maoyufan.world?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"日常","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mao Yufan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://www.maoyufan.world/"},"publisher":{"@type":"Organization","name":"Cheshire Cat","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
