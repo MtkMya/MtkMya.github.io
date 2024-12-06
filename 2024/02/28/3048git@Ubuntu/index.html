@@ -1714,7 +1714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733477686182),
+    lastupdate: new Date(1733477882847),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2696,8 +2696,20 @@ git show [版本名] [文件名]
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/28/3047%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E8%AE%BE%E5%A4%87%E6%A0%91/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>嵌入式Linux设备树</p>
+        <a class='prev' href='/2024/02/29/3049i.MX6ULL%E7%9A%84GPIO%E5%8F%8A%E5%85%B6%E5%A4%96%E8%AE%BE%E9%80%82%E9%85%8D/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>i.MX6ULL的GPIO及其外设适配</p>
+          <p class='content'>1.引脚控制最古老也是最普世的引脚控制方法:操作引脚寄存器
+1.1 pinctrl子系统
+配置引脚功能用于UART、SPI、I2C、GPIO等
+提供接口配置中断
+使用设备树定义
+
+举例&amp;...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/02/28/3047%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E8%AE%BE%E5%A4%87%E6%A0%91/'>
+          <p class='title'>嵌入式Linux设备树<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>设备树用于给内核中的驱动指定硬件信息。
 和设备树有关的文件各式：
 
@@ -2708,12 +2720,6 @@ git show [版本名] [文件名]
 设备树语法首行    /文件版本/;
 根节点
 /...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/02/24/3044%E4%B8%96/'>
-          <p class='title'>世界尽头->冷酷仙境<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'></p>
         </a>
       
     </div>

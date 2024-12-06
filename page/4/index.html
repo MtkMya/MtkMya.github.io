@@ -1710,7 +1710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733477686182),
+    lastupdate: new Date(1733477882847),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2492,7 +2492,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/14/3079修饰符static@C++/">
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/05/14/3078报错multiple_definition@C/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
   </span>
@@ -2510,25 +2510,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/05/14/3079%E4%BF%AE%E9%A5%B0%E7%AC%A6static@C++/"  itemprop="url">
-        C/C++修饰符static
+      <a href="/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/"  itemprop="url">
+        C报错multiple_definition
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        
-修饰全局变量/函数时，该变量/函数只能在本文件中调用，对其他文件不可见
-修饰局部变量时，只会初始化一次
-static修饰的变量默认初始化为0
-
-C++独有特性
-
-修饰类的数据成员时，该类的所有对象共用一个实例
-修饰类的函数成员时，表示静态成员函数，只能访问它的参数、类的静态数据、全局变量。
-
-
+        原因重复定义错误。C语言规定：一个变量可以多次声明但是只能定义一次。多个.c或.cpp文件同时引用一个.h文件时，其被包含至多个目标文件（.o）中，链接时，.h文件中定义的变量/函数会出现重复定义的错误。
+解决方法
+C语言中可以在.h文件中添加条件编译解决（#ifndef…）。在C++中无效，引文C++中#indef的作用域仅限一个文件
+C++中可在变量/函数前添加static
+在c/cpp...
       
     
   </div>
@@ -2553,7 +2547,7 @@ C++独有特性
       </div>
       
         <div>
-          <a class='readmore' href='/2024/05/14/3079%E4%BF%AE%E9%A5%B0%E7%AC%A6static@C++/' itemprop="url">
+          <a class='readmore' href='/2024/05/14/3078%E6%8A%A5%E9%94%99multiple_definition@C/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3005,6 +2999,78 @@ pinctrl_keys: keysgrp &#123;
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/28/3048git@Ubuntu/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Cheshire Cat">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Cheshire Cat">
+    <meta itemprop="description" content="日常">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/02/28/3048git@Ubuntu/"  itemprop="url">
+        git@Ubuntu
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        git的操作流创建工程-&gt;写代码-&gt;上传代码到仓库-&gt;修改代码-&gt;上传代码测试新想法-&gt;创建分支出现问题-&gt;回滚
+初始化新仓库并创建账户git init
+git config --global user.name &quot;elf&quot;
+git config --global user.name &quot;elf@elf.com&quot;
+
+执...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-02-28T00:00:00+08:00">2024-02-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/02/28/3048git@Ubuntu/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/28/3047嵌入式Linux设备树/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Cheshire Cat">
@@ -3072,78 +3138,6 @@ pinctrl_keys: keysgrp &#123;
       
         <div>
           <a class='readmore' href='/2024/02/28/3047%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E8%AE%BE%E5%A4%87%E6%A0%91/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://www.maoyufan.world/2024/02/28/3048git@Ubuntu/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Cheshire Cat">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Cheshire Cat">
-    <meta itemprop="description" content="日常">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/28/3048git@Ubuntu/"  itemprop="url">
-        git@Ubuntu
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        git的操作流创建工程-&gt;写代码-&gt;上传代码到仓库-&gt;修改代码-&gt;上传代码测试新想法-&gt;创建分支出现问题-&gt;回滚
-初始化新仓库并创建账户git init
-git config --global user.name &quot;elf&quot;
-git config --global user.name &quot;elf@elf.com&quot;
-
-执...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-28T00:00:00+08:00">2024-02-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="sep"></span><a class="category-link" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/">i.MX6ULL</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url"><span itemprop="name">嵌入式</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/i-MX6ULL/" itemprop="url"><span itemprop="name">i.MX6ULL</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/28/3048git@Ubuntu/' itemprop="url">
             阅读全文
           </a>
         </div>
